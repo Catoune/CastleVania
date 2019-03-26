@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: 5fcaca61f8e21f44888720d8acb003c4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DS DSi - Castlevania Dawn of Sorrow - Alucard_0
+    21300002: DS DSi - Castlevania Dawn of Sorrow - Alucard_1
+    21300004: DS DSi - Castlevania Dawn of Sorrow - Alucard_2
+    21300006: DS DSi - Castlevania Dawn of Sorrow - Alucard_3
+    21300008: DS DSi - Castlevania Dawn of Sorrow - Alucard_4
+    21300010: DS DSi - Castlevania Dawn of Sorrow - Alucard_5
+    21300012: DS DSi - Castlevania Dawn of Sorrow - Alucard_6
+    21300014: DS DSi - Castlevania Dawn of Sorrow - Alucard_7
+    21300016: DS DSi - Castlevania Dawn of Sorrow - Alucard_8
+    21300018: DS DSi - Castlevania Dawn of Sorrow - Alucard_9
+    21300020: DS DSi - Castlevania Dawn of Sorrow - Alucard_10
+    21300022: DS DSi - Castlevania Dawn of Sorrow - Alucard_11
+    21300024: DS DSi - Castlevania Dawn of Sorrow - Alucard_12
+    21300026: DS DSi - Castlevania Dawn of Sorrow - Alucard_13
+    21300028: DS DSi - Castlevania Dawn of Sorrow - Alucard_14
+    21300030: DS DSi - Castlevania Dawn of Sorrow - Alucard_15
+    21300032: DS DSi - Castlevania Dawn of Sorrow - Alucard_16
+    21300034: DS DSi - Castlevania Dawn of Sorrow - Alucard_17
+    21300036: DS DSi - Castlevania Dawn of Sorrow - Alucard_18
+    21300038: DS DSi - Castlevania Dawn of Sorrow - Alucard_19
+    21300040: DS DSi - Castlevania Dawn of Sorrow - Alucard_20
+    21300042: DS DSi - Castlevania Dawn of Sorrow - Alucard_21
+    21300044: DS DSi - Castlevania Dawn of Sorrow - Alucard_22
+    21300046: DS DSi - Castlevania Dawn of Sorrow - Alucard_23
+    21300048: DS DSi - Castlevania Dawn of Sorrow - Alucard_24
+    21300050: DS DSi - Castlevania Dawn of Sorrow - Alucard_25
+    21300052: DS DSi - Castlevania Dawn of Sorrow - Alucard_26
+    21300054: DS DSi - Castlevania Dawn of Sorrow - Alucard_27
+    21300056: DS DSi - Castlevania Dawn of Sorrow - Alucard_28
+    21300058: DS DSi - Castlevania Dawn of Sorrow - Alucard_29
+    21300060: DS DSi - Castlevania Dawn of Sorrow - Alucard_30
+    21300062: DS DSi - Castlevania Dawn of Sorrow - Alucard_31
+    21300064: DS DSi - Castlevania Dawn of Sorrow - Alucard_32
+    21300066: DS DSi - Castlevania Dawn of Sorrow - Alucard_33
+    21300068: DS DSi - Castlevania Dawn of Sorrow - Alucard_34
+    21300070: DS DSi - Castlevania Dawn of Sorrow - Alucard_35
+    21300072: DS DSi - Castlevania Dawn of Sorrow - Alucard_36
+    21300074: DS DSi - Castlevania Dawn of Sorrow - Alucard_37
+    21300076: DS DSi - Castlevania Dawn of Sorrow - Alucard_38
+    21300078: DS DSi - Castlevania Dawn of Sorrow - Alucard_39
+    21300080: DS DSi - Castlevania Dawn of Sorrow - Alucard_40
+    21300082: DS DSi - Castlevania Dawn of Sorrow - Alucard_41
+    21300084: DS DSi - Castlevania Dawn of Sorrow - Alucard_42
+    21300086: DS DSi - Castlevania Dawn of Sorrow - Alucard_43
+    21300088: DS DSi - Castlevania Dawn of Sorrow - Alucard_44
+    21300090: DS DSi - Castlevania Dawn of Sorrow - Alucard_45
+    21300092: DS DSi - Castlevania Dawn of Sorrow - Alucard_46
+    21300094: DS DSi - Castlevania Dawn of Sorrow - Alucard_47
+    21300096: DS DSi - Castlevania Dawn of Sorrow - Alucard_48
+    21300098: DS DSi - Castlevania Dawn of Sorrow - Alucard_49
+    21300100: DS DSi - Castlevania Dawn of Sorrow - Alucard_50
+    21300102: DS DSi - Castlevania Dawn of Sorrow - Alucard_51
+    21300104: DS DSi - Castlevania Dawn of Sorrow - Alucard_52
+    21300106: DS DSi - Castlevania Dawn of Sorrow - Alucard_53
+    21300108: DS DSi - Castlevania Dawn of Sorrow - Alucard_54
+    21300110: DS DSi - Castlevania Dawn of Sorrow - Alucard_55
+    21300112: DS DSi - Castlevania Dawn of Sorrow - Alucard_56
+    21300114: DS DSi - Castlevania Dawn of Sorrow - Alucard_57
+    21300116: DS DSi - Castlevania Dawn of Sorrow - Alucard_58
+    21300118: DS DSi - Castlevania Dawn of Sorrow - Alucard_59
+    21300120: DS DSi - Castlevania Dawn of Sorrow - Alucard_60
+    21300122: DS DSi - Castlevania Dawn of Sorrow - Alucard_61
+    21300124: DS DSi - Castlevania Dawn of Sorrow - Alucard_62
+    21300126: DS DSi - Castlevania Dawn of Sorrow - Alucard_63
+    21300128: DS DSi - Castlevania Dawn of Sorrow - Alucard_64
+    21300130: DS DSi - Castlevania Dawn of Sorrow - Alucard_65
+    21300132: DS DSi - Castlevania Dawn of Sorrow - Alucard_66
+    21300134: DS DSi - Castlevania Dawn of Sorrow - Alucard_67
+    21300136: DS DSi - Castlevania Dawn of Sorrow - Alucard_68
+    21300138: DS DSi - Castlevania Dawn of Sorrow - Alucard_69
+    21300140: DS DSi - Castlevania Dawn of Sorrow - Alucard_70
+    21300142: DS DSi - Castlevania Dawn of Sorrow - Alucard_71
+    21300144: DS DSi - Castlevania Dawn of Sorrow - Alucard_72
+    21300146: DS DSi - Castlevania Dawn of Sorrow - Alucard_73
+    21300148: DS DSi - Castlevania Dawn of Sorrow - Alucard_74
+    21300150: DS DSi - Castlevania Dawn of Sorrow - Alucard_75
+    21300152: DS DSi - Castlevania Dawn of Sorrow - Alucard_76
+    21300154: DS DSi - Castlevania Dawn of Sorrow - Alucard_77
+    21300156: DS DSi - Castlevania Dawn of Sorrow - Alucard_78
+    21300158: DS DSi - Castlevania Dawn of Sorrow - Alucard_79
+    21300160: DS DSi - Castlevania Dawn of Sorrow - Alucard_80
+    21300162: DS DSi - Castlevania Dawn of Sorrow - Alucard_81
+    21300164: DS DSi - Castlevania Dawn of Sorrow - Alucard_82
+    21300166: DS DSi - Castlevania Dawn of Sorrow - Alucard_83
+    21300168: DS DSi - Castlevania Dawn of Sorrow - Alucard_84
+    21300170: DS DSi - Castlevania Dawn of Sorrow - Alucard_85
+    21300172: DS DSi - Castlevania Dawn of Sorrow - Alucard_86
+    21300174: DS DSi - Castlevania Dawn of Sorrow - Alucard_87
+    21300176: DS DSi - Castlevania Dawn of Sorrow - Alucard_88
+    21300178: DS DSi - Castlevania Dawn of Sorrow - Alucard_89
+    21300180: DS DSi - Castlevania Dawn of Sorrow - Alucard_90
+    21300182: DS DSi - Castlevania Dawn of Sorrow - Alucard_91
+    21300184: DS DSi - Castlevania Dawn of Sorrow - Alucard_92
+    21300186: DS DSi - Castlevania Dawn of Sorrow - Alucard_93
+    21300188: DS DSi - Castlevania Dawn of Sorrow - Alucard_94
+    21300190: DS DSi - Castlevania Dawn of Sorrow - Alucard_95
+    21300192: DS DSi - Castlevania Dawn of Sorrow - Alucard_96
+    21300194: DS DSi - Castlevania Dawn of Sorrow - Alucard_97
+    21300196: DS DSi - Castlevania Dawn of Sorrow - Alucard_98
+    21300198: DS DSi - Castlevania Dawn of Sorrow - Alucard_99
+    21300200: DS DSi - Castlevania Dawn of Sorrow - Alucard_100
+    21300202: DS DSi - Castlevania Dawn of Sorrow - Alucard_101
+    21300204: DS DSi - Castlevania Dawn of Sorrow - Alucard_102
+    21300206: DS DSi - Castlevania Dawn of Sorrow - Alucard_103
+    21300208: DS DSi - Castlevania Dawn of Sorrow - Alucard_104
+    21300210: DS DSi - Castlevania Dawn of Sorrow - Alucard_105
+    21300212: DS DSi - Castlevania Dawn of Sorrow - Alucard_106
+    21300214: DS DSi - Castlevania Dawn of Sorrow - Alucard_107
+    21300216: DS DSi - Castlevania Dawn of Sorrow - Alucard_108
+    21300218: DS DSi - Castlevania Dawn of Sorrow - Alucard_109
+    21300220: DS DSi - Castlevania Dawn of Sorrow - Alucard_110
+    21300222: DS DSi - Castlevania Dawn of Sorrow - Alucard_111
+    21300224: DS DSi - Castlevania Dawn of Sorrow - Alucard_112
+    21300226: DS DSi - Castlevania Dawn of Sorrow - Alucard_113
+    21300228: DS DSi - Castlevania Dawn of Sorrow - Alucard_114
+    21300230: DS DSi - Castlevania Dawn of Sorrow - Alucard_115
+    21300232: DS DSi - Castlevania Dawn of Sorrow - Alucard_116
+    21300234: DS DSi - Castlevania Dawn of Sorrow - Alucard_117
+    21300236: DS DSi - Castlevania Dawn of Sorrow - Alucard_118
+    21300238: DS DSi - Castlevania Dawn of Sorrow - Alucard_119
+    21300240: DS DSi - Castlevania Dawn of Sorrow - Alucard_120
+    21300242: DS DSi - Castlevania Dawn of Sorrow - Alucard_121
+    21300244: DS DSi - Castlevania Dawn of Sorrow - Alucard_122
+    21300246: DS DSi - Castlevania Dawn of Sorrow - Alucard_123
+    21300248: DS DSi - Castlevania Dawn of Sorrow - Alucard_124
+    21300250: DS DSi - Castlevania Dawn of Sorrow - Alucard_125
+    21300252: DS DSi - Castlevania Dawn of Sorrow - Alucard_126
+    21300254: DS DSi - Castlevania Dawn of Sorrow - Alucard_127
+    21300256: DS DSi - Castlevania Dawn of Sorrow - Alucard_128
+    21300258: DS DSi - Castlevania Dawn of Sorrow - Alucard_129
+    21300260: DS DSi - Castlevania Dawn of Sorrow - Alucard_130
+    21300262: DS DSi - Castlevania Dawn of Sorrow - Alucard_131
+    21300264: DS DSi - Castlevania Dawn of Sorrow - Alucard_132
+    21300266: DS DSi - Castlevania Dawn of Sorrow - Alucard_133
+    21300268: DS DSi - Castlevania Dawn of Sorrow - Alucard_134
+    21300270: DS DSi - Castlevania Dawn of Sorrow - Alucard_135
+    21300272: DS DSi - Castlevania Dawn of Sorrow - Alucard_136
+    21300274: DS DSi - Castlevania Dawn of Sorrow - Alucard_137
+    21300276: DS DSi - Castlevania Dawn of Sorrow - Alucard_138
+    21300278: DS DSi - Castlevania Dawn of Sorrow - Alucard_139
+    21300280: DS DSi - Castlevania Dawn of Sorrow - Alucard_140
+    21300282: DS DSi - Castlevania Dawn of Sorrow - Alucard_141
+    21300284: DS DSi - Castlevania Dawn of Sorrow - Alucard_142
+    21300286: DS DSi - Castlevania Dawn of Sorrow - Alucard_143
+    21300288: DS DSi - Castlevania Dawn of Sorrow - Alucard_144
+    21300290: DS DSi - Castlevania Dawn of Sorrow - Alucard_145
+    21300292: DS DSi - Castlevania Dawn of Sorrow - Alucard_146
+    21300294: DS DSi - Castlevania Dawn of Sorrow - Alucard_147
+    21300296: DS DSi - Castlevania Dawn of Sorrow - Alucard_161
+    21300298: DS DSi - Castlevania Dawn of Sorrow - Alucard_162
+    21300300: DS DSi - Castlevania Dawn of Sorrow - Alucard_163
+    21300302: DS DSi - Castlevania Dawn of Sorrow - Alucard_164
+    21300304: DS DSi - Castlevania Dawn of Sorrow - Alucard_165
+    21300306: DS DSi - Castlevania Dawn of Sorrow - Alucard_166
+    21300308: DS DSi - Castlevania Dawn of Sorrow - Alucard_167
+    21300310: DS DSi - Castlevania Dawn of Sorrow - Alucard_168
+    21300312: DS DSi - Castlevania Dawn of Sorrow - Alucard_169
+    21300314: DS DSi - Castlevania Dawn of Sorrow - Alucard_170
+    21300316: DS DSi - Castlevania Dawn of Sorrow - Alucard_171
+    21300318: DS DSi - Castlevania Dawn of Sorrow - Alucard_172
+    21300320: DS DSi - Castlevania Dawn of Sorrow - Alucard_173
+    21300322: DS DSi - Castlevania Dawn of Sorrow - Alucard_174
+    21300324: DS DSi - Castlevania Dawn of Sorrow - Alucard_175
+    21300326: DS DSi - Castlevania Dawn of Sorrow - Alucard_176
+    21300328: DS DSi - Castlevania Dawn of Sorrow - Alucard_177
+    21300330: DS DSi - Castlevania Dawn of Sorrow - Alucard_178
+    21300332: DS DSi - Castlevania Dawn of Sorrow - Alucard_179
+    21300334: DS DSi - Castlevania Dawn of Sorrow - Alucard_180
+    21300336: DS DSi - Castlevania Dawn of Sorrow - Alucard_181
+    21300338: DS DSi - Castlevania Dawn of Sorrow - Alucard_182
+    21300340: DS DSi - Castlevania Dawn of Sorrow - Alucard_183
+    21300342: DS DSi - Castlevania Dawn of Sorrow - Alucard_184
+    21300344: DS DSi - Castlevania Dawn of Sorrow - Alucard_185
+    21300346: DS DSi - Castlevania Dawn of Sorrow - Alucard_186
+    21300348: DS DSi - Castlevania Dawn of Sorrow - Alucard_187
+    21300350: DS DSi - Castlevania Dawn of Sorrow - Alucard_188
+    21300352: DS DSi - Castlevania Dawn of Sorrow - Alucard_189
+    21300354: DS DSi - Castlevania Dawn of Sorrow - Alucard_190
+    21300356: DS DSi - Castlevania Dawn of Sorrow - Alucard_191
+    21300358: DS DSi - Castlevania Dawn of Sorrow - Alucard_192
+    21300360: DS DSi - Castlevania Dawn of Sorrow - Alucard_193
+    21300362: DS DSi - Castlevania Dawn of Sorrow - Alucard_194
+    21300364: DS DSi - Castlevania Dawn of Sorrow - Alucard_195
+    21300366: DS DSi - Castlevania Dawn of Sorrow - Alucard_196
+    21300368: DS DSi - Castlevania Dawn of Sorrow - Alucard_197
+    21300370: DS DSi - Castlevania Dawn of Sorrow - Alucard_198
+    21300372: DS DSi - Castlevania Dawn of Sorrow - Alucard_199
+    21300374: DS DSi - Castlevania Dawn of Sorrow - Alucard_200
+    21300376: DS DSi - Castlevania Dawn of Sorrow - Alucard_201
+    21300378: DS DSi - Castlevania Dawn of Sorrow - Alucard_202
+    21300380: DS DSi - Castlevania Dawn of Sorrow - Alucard_203
+    21300382: DS DSi - Castlevania Dawn of Sorrow - Alucard_204
+    21300384: DS DSi - Castlevania Dawn of Sorrow - Alucard_205
+    21300386: DS DSi - Castlevania Dawn of Sorrow - Alucard_206
+    21300388: DS DSi - Castlevania Dawn of Sorrow - Alucard_207
+    21300390: DS DSi - Castlevania Dawn of Sorrow - Alucard_208
+    21300392: DS DSi - Castlevania Dawn of Sorrow - Alucard_209
+    21300394: DS DSi - Castlevania Dawn of Sorrow - Alucard_210
+    21300396: DS DSi - Castlevania Dawn of Sorrow - Alucard_211
+    21300398: DS DSi - Castlevania Dawn of Sorrow - Alucard_212
+    21300400: DS DSi - Castlevania Dawn of Sorrow - Alucard_213
+    21300402: DS DSi - Castlevania Dawn of Sorrow - Alucard_214
+    21300404: DS DSi - Castlevania Dawn of Sorrow - Alucard_215
+    21300406: DS DSi - Castlevania Dawn of Sorrow - Alucard_216
+    21300408: DS DSi - Castlevania Dawn of Sorrow - Alucard_217
+    21300410: DS DSi - Castlevania Dawn of Sorrow - Alucard_218
+    21300412: DS DSi - Castlevania Dawn of Sorrow - Alucard_219
+    21300414: DS DSi - Castlevania Dawn of Sorrow - Alucard_220
+    21300416: DS DSi - Castlevania Dawn of Sorrow - Alucard_221
+    21300418: DS DSi - Castlevania Dawn of Sorrow - Alucard_222
+    21300420: DS DSi - Castlevania Dawn of Sorrow - Alucard_223
+    21300422: DS DSi - Castlevania Dawn of Sorrow - Alucard_224
+    21300424: DS DSi - Castlevania Dawn of Sorrow - Alucard_225
+    21300426: DS DSi - Castlevania Dawn of Sorrow - Alucard_226
+    21300428: DS DSi - Castlevania Dawn of Sorrow - Alucard_227
+    21300430: DS DSi - Castlevania Dawn of Sorrow - Alucard_228
+    21300432: DS DSi - Castlevania Dawn of Sorrow - Alucard_229
+    21300434: DS DSi - Castlevania Dawn of Sorrow - Alucard_230
+    21300436: DS DSi - Castlevania Dawn of Sorrow - Alucard_231
+    21300438: DS DSi - Castlevania Dawn of Sorrow - Alucard_232
+    21300440: DS DSi - Castlevania Dawn of Sorrow - Alucard_233
+    21300442: DS DSi - Castlevania Dawn of Sorrow - Alucard_234
+    21300444: DS DSi - Castlevania Dawn of Sorrow - Alucard_235
+    21300446: DS DSi - Castlevania Dawn of Sorrow - Alucard_236
+    21300448: AlucardStandingAttack_0
+    21300450: AlucardStandingAttack_1
+    21300452: AlucardStandingAttack_2
+    21300454: AlucardStandingAttack_3
+    21300456: AlucardStandingAttack_4
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AlucardStandingAttack_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 435
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc91e2e208603c4eaf5bb6d28c908a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlucardStandingAttack_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 435
+        width: 30
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3072682bb5026804698d8bcaefd11e09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlucardStandingAttack_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 435
+        width: 37
+        height: 28
+      alignment: 9
+      pivot: {x: 0.35135135, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9b638c682d4724288a4574549191bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlucardStandingAttack_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 435
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3125, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729f46a19e7a42a4c91286c35d32a319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1c38d67c553369048a45f4d310c05b3b
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
