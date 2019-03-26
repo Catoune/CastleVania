@@ -20,16 +20,6 @@ public class StatusManager : MonoBehaviour {
 	private bool isDying = false;
 	private Animator animator;
 
-
-	void OnLevelWasLoaded(int level)
-	{
-		if(Application.loadedLevelName.Equals("Scene_00") ||
-		   Application.loadedLevelName.Equals("Custom_00"))
-		{
-			lives = 3;
-		}
-	}
-
 	public void enterStairPortal(string levelName) {
 
 		if (portalNum != 0) {
@@ -63,7 +53,6 @@ public class StatusManager : MonoBehaviour {
 	{
 		animator = GetComponent<Animator>();
 
-		InputManager.Instance.OnKeyDown_G += HandleOnKeyDown_G;
 
 	}
 
@@ -137,7 +126,6 @@ public class StatusManager : MonoBehaviour {
 	IEnumerator playerDying()
 	{
 //		yield return new WaitForSeconds (0.5f);
-		InputManager.Instance.disableControl = true;
 		lives--;
 		animator.SetBool ("Dead", true);
 		GameObject SimonDead = Resources.Load (Globals.SEdir + "SimonDead") as GameObject;
