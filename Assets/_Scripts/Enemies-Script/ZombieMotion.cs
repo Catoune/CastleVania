@@ -10,9 +10,8 @@ public class ZombieMotion : MonoBehaviour {
 	public bool isMoveLeft = true;
 
 	// Use this for initialization
-	void Start () {
-
-
+	void Start ()
+    {
 		GameObject playerObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
 		
 		if(playerObj.transform.position.x > transform.position.x)
@@ -27,15 +26,16 @@ public class ZombieMotion : MonoBehaviour {
 		speed = new Vector2(0.0f, defaultSpeed.y);
 	}
 
-	public void Flip() {
+	public void Flip()
+    {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
-		transform.localScale = theScale;
-		
+		transform.localScale = theScale;	
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
 		move ();
 	}
 
