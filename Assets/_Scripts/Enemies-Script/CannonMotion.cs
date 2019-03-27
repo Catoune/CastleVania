@@ -28,7 +28,7 @@ public class CannonMotion : MonoBehaviour {
 	{
 		Debug.Log ("Player hitted");
 		PlayerController pcScript = gb.GetComponent<PlayerController> ();
-		pcScript.HandleHurt ();
+		pcScript.Hurt ();
 
 		GameObject deathEffect = Resources.Load ("Prefab/death") as GameObject;
 		Instantiate (deathEffect, GetComponent<Collider2D>().bounds.center, Quaternion.identity);

@@ -144,12 +144,6 @@ public class ItemMotion : MonoBehaviour {
 			smScript.heartNum += 5;
 			Debug.Log ("fetched heart");
 			break;
-		
-		case Globals.ItemName.WhipUp:
-			if(attManager.whipLevel < 3)
-				attManager.UpgradWhip();
-			Debug.Log ("fetched Morning Star, whip powered up");
-			break;
 
 		case Globals.ItemName.Rosary:
 

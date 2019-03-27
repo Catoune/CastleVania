@@ -232,7 +232,7 @@ TextureImporter:
     21300454: AlucardStandingAttack_3
     21300456: AlucardStandingAttack_4
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -321,7 +321,7 @@ TextureImporter:
         width: 26
         height: 46
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5, y: 0.23913044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,7 +341,7 @@ TextureImporter:
         width: 29
         height: 46
       alignment: 9
-      pivot: {x: 0.44827586, y: 0.5}
+      pivot: {x: 0.44827586, y: 0.23913044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -361,7 +361,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 9
-      pivot: {x: 0.35135135, y: 0.5}
+      pivot: {x: 0.35135135, y: 0.23913044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,7 +381,7 @@ TextureImporter:
         width: 42
         height: 46
       alignment: 9
-      pivot: {x: 0.30952382, y: 0.5}
+      pivot: {x: 0.30952382, y: 0.23913044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,7 +401,7 @@ TextureImporter:
         width: 25
         height: 47
       alignment: 9
-      pivot: {x: 0.44, y: 0.4893617}
+      pivot: {x: 0.44, y: 0.23404256}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

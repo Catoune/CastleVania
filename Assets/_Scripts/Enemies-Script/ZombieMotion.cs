@@ -87,6 +87,6 @@ public class ZombieMotion : MonoBehaviour {
 	{
 		Debug.Log ("Player hitted");
 		PlayerController pcScript = gb.GetComponent<PlayerController> ();
-		pcScript.HandleHurt ();
+		pcScript.Hurt ();
 	}
 }

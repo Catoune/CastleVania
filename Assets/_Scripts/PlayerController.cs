@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
 
 	protected Animator animator;
 	private WhipAttackManager whipAttManager;
-	private StairManager stairManager;
 	protected CollisionManager collManager;
 	private SubWeaponManager subWeaponManager;
 	private HurtManager hurtManager;
@@ -33,56 +32,45 @@ public class PlayerController : MonoBehaviour
 
 	public int CurHorizontalVelocity
 	{
-		get
-		{
-			//Some other code
-			return curHorizontalVelocity;
-		}
-		set
-		{
-			//Some other code
-			curHorizontalVelocity = value;
-		}
+		get{return curHorizontalVelocity ;}
+		set{curHorizontalVelocity = value;}
 	}
 
-	// Use this for initialization
 	void Start ()
     {
 		animator = GetComponent<Animator> ();
 		whipAttManager = GetComponent<WhipAttackManager> ();
-		stairManager = GetComponent<StairManager> ();
 		collManager = GetComponent<CollisionManager> ();
 		subWeaponManager = GetComponent<SubWeaponManager> ();
 		hurtManager = GetComponent<HurtManager> ();
 
 		collManager.ExitGround += handleOnExitGround;
-		Flip (); // since the raw sprite face left
+		Flip ();
 	}
 
     void Update()
     {
-        if (!animator.GetBool("Hurt"))
-            curHorizontalVelocity = animator.GetInteger("Speed");
+        if (!animator.GetBool("Hurt")){curHorizontalVelocity = animator.GetInteger("Speed");}
 
         if(Input.GetAxis("Horizontal")>0)
         {
-            KeyDownR();
+            RightDirection();
         }
         if (Input.GetAxis("Horizontal") < 0)
         {
-            KeyDownL();
+            LeftDirection();
         }
         if (Input.GetAxis("Horizontal") == 0)
         {
             KeyUpH();
         }
-        if(Input.GetAxis("Vertical") > 0)
+        if(Input.GetAxis("Vertical") > 0.85)
         {
-            KeyDownDown();
+            CrounchOn();
         }
         if (Input.GetAxis("Vertical") == 0)
         {
-            KeyUpDown();
+            CrounchOff();
         }
         if (Input.GetButtonDown("Jump"))
         {
@@ -90,257 +78,151 @@ public class PlayerController : MonoBehaviour
         }
         if(Input.GetButtonDown("Attack"))
         {
-            AttackButton();
+            Attack();
         }
         if(Input.GetButtonDown("Attack") && (Input.GetAxis("Vertical") < 0))
         {
-            KeyUpAndB();
+            ThrowWeapon();
         }
     }
 
-	// ============================================================================ //
-	/*
-	 * Event Handlers 
-	 */
-	void KeyUpH ()
+    void FixedUpdate()
+    {
+        if (animator.GetInteger("Speed") > 0 && !facingRight) { Flip() ;}
+        if (animator.GetInteger("Speed") < 0 &&  facingRight) { Flip() ;}
+
+        normalFixedUpdate();
+    }
+
+    void normalFixedUpdate()
+    {
+        if (collManager.isWallOn(Globals.Direction.Right))
+        {
+            curHorizontalVelocity = curHorizontalVelocity > 0 ? 0 : curHorizontalVelocity;
+        }
+        if (collManager.isWallOn(Globals.Direction.Left))
+        {
+            curHorizontalVelocity = curHorizontalVelocity < 0 ? 0 : curHorizontalVelocity;
+        }
+
+        // Horizontal Update
+        if (collManager.isWallOn(Globals.Direction.Bottom))
+        {
+            if (VerticalSpeed < 0)
+            {
+                VerticalSpeed = 0;
+
+                grounded = true;
+                animator.SetInteger("Speed", 0);
+
+                //				float reviseHeight = collManager.curBoxTop - collider2D.bounds.min.y;
+
+                // Vertical overwrite update
+                /*transform.position = new Vector2(
+                    transform.position.x,
+                    collManager.curBoxTop + GetComponent<Collider2D>().bounds.size.y / 2.0f
+                    );*/
+            }
+        }
+        else
+        {
+            grounded = false;
+        }
+        transform.position = new Vector2(transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime, transform.position.y);
+        // Vertical update
+       transform.position = new Vector2(
+            transform.position.x,
+            transform.position.y + VerticalSpeed * Time.fixedDeltaTime
+            );
+        if (!grounded)
+            VerticalSpeed += VerticalAccerlation * Time.fixedDeltaTime;
+    }
+
+    void KeyUpH ()
 	{
-		if (!grounded)
-        {
-			return;
-		}
-		if (curHorizontalVelocity != 0)
-        {
-			animator.SetInteger("Speed", 0);
-		}
+		if (!grounded)                  { return                          ;}
+		if (curHorizontalVelocity != 0) { animator.SetInteger("Speed", 0) ;}
 	}
 
-	void KeyDownR () {
-		// Debug.Log ("Get Axis Right");
-		// reverse as left, depend go up or down by stair facing
-		if (stairManager.isOnStair ()) {
-			if (stairManager.getCurStairFacing() == Globals.STAIR_FACING.Right)
-				stairManager.tryGoUpStair();
-			else 
-				stairManager.tryGoDownStair();
-
-			return;
-		}
-		if (!grounded || whipAttManager.attacking || animator.GetBool("Squat"))
-			return;
-		if (curHorizontalVelocity == 0) {
-			animator.SetInteger("Speed", 1);
-		}
-		else if (curHorizontalVelocity == 1) {
-			;
-		}
-		else if (curHorizontalVelocity == -1) {
-			animator.SetInteger("Speed", 0);
-		}
-		else {
-			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
-		}
+	void RightDirection ()
+    {
+        if (!grounded || whipAttManager.attacking || animator.GetBool("Squat")) {return;}
+		if (curHorizontalVelocity == 0)       {animator.SetInteger("Speed", 1);}
+		else if (curHorizontalVelocity == 1)  {                               ;}
+		else if (curHorizontalVelocity == -1) {animator.SetInteger("Speed", 0);}
 	}
 
-	void KeyDownL () {
-		// Debug.Log ("Get Axis Left");
-		// When on stair, go up or down depend on the current stair facing 
-		if (stairManager.isOnStair ()) {
-			if (stairManager.getCurStairFacing() == Globals.STAIR_FACING.Right)
-				stairManager.tryGoDownStair();
-			else 
-				stairManager.tryGoUpStair();
-
-			return;
-		}
-
-		if (!grounded || whipAttManager.attacking 
-		    || hurtManager.onFlyHurting() || animator.GetBool("Squat"))
-			return;
-		if (curHorizontalVelocity == 0) {
-			animator.SetInteger("Speed", -1);
-		}
-		else if (curHorizontalVelocity == 1) {
-			animator.SetInteger("Speed", 0);
-		}
-		else if (curHorizontalVelocity == -1) {
-			// do nothing
-			;
-		}
-		else {
-			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
-		}
-		Debug.Log("Update the speed ");
+	void LeftDirection ()
+    {
+        if      (!grounded || whipAttManager.attacking || hurtManager.onFlyHurting() || animator.GetBool("Squat")) {return;}
+		if      (curHorizontalVelocity == 0) {animator.SetInteger("Speed", -1);}
+		else if (curHorizontalVelocity == 1) {animator.SetInteger("Speed",  0);}
+		else if (curHorizontalVelocity == -1) {;}
 	}
 
 	void KeyDownUp ()
 	{
-		// Debug.Log("On Key Press: Up");
-		if (!grounded || whipAttManager.attacking || subWeaponManager.throwing)
-			return;
-		if (stairManager.isInStairArea())
-			stairManager.tryGoUpStair ();
+        if (!grounded || whipAttManager.attacking || subWeaponManager.throwing){ return;}
 	}
 
-	void JumpButton () {
-		// Debug.Log ("Key A pressed");
-		// jump	
+    //Jump
+	void JumpButton ()
+    {
 		if (grounded 
 		    && !animator.GetBool("Squat")
 		    && !animator.GetBool("Jump")
 		    && !whipAttManager.attacking)
 			StartCoroutine(Jump());
-
-
 	}
 
-	void AttackButton () {
-		if (stairManager.isOnStairAnimationPlaying()) {
-			return;
-		}
-		// Debug.Log ("Key B pressed");
-		// attack
-		// delegate to WhipAttackManager
-		if(!whipAttManager.attacking)
-			StartCoroutine (whipAttManager.WhipAttack());
+    IEnumerator Jump()
+    {
+        animator.SetBool("Jump", true);
+        grounded = false;
+        VerticalSpeed = initVerticalSpeed;
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("Jump", false);
+    }
+
+    //Attaque du Personnage
+    void Attack ()
+    {
+        if (!whipAttManager.attacking) { StartCoroutine(whipAttManager.WhipAttack()); }
 	}
 
 	
-	
-	void KeyDownDown () {
-		if (!grounded || whipAttManager.attacking)
-			return;
-		// Debug.Log ("Key Down arrow or S is activated");
-		// squat enable
-		// TODO enable squat when in prep_up_stair
-		if (stairManager.onStairArea == StairManager.ON_STAIR_AREA.PrepUp && 
-		    !stairManager.isOnStair()) {
-			animator.SetBool ("Squat", true);
-		}
-		else if (stairManager.isInStairArea())
+    //S'accroupir
+	void CrounchOn ()
+    {
+        animator.SetInteger("Speed", 0);
+        if (!grounded || whipAttManager.attacking)   {return;}
+        else
         {
-			stairManager.tryGoDownStair();
-		}
-		else
-        {
-			animator.SetBool ("Squat", true);
-		}
-		
+            animator.SetBool("Squat", true);
+        }		
 	}
 
-	void KeyUpDown () {
-		// squat disable 
+    //Se relever
+	void CrounchOff ()
+    {
 		animator.SetBool ("Squat", false);
 	}
 
-	void KeyUpAndB () {
-		Debug.Log("INPUT: up and B pressed as chord");
-		if (stairManager.isOnStairAnimationPlaying())
-			return;
-
-		if(!subWeaponManager.throwing && subWeaponManager.isCarrying && !whipAttManager.attacking)
-			StartCoroutine (subWeaponManager.Throw());
-		else if(!whipAttManager.attacking)
-			StartCoroutine (whipAttManager.WhipAttack());
-		// do what 
-		// animator.SetBool ("Throw", false);
-	}
-
-
-	// ============================================================================ //
-	// =====
-	// Events
-	// =====
-
-	public virtual void HandleHurt() {
-		if (!hurtManager.Hurting && !animator.GetBool("Dead"))
-			StartCoroutine (hurtManager.Hurt ());
-
-	}
-
-	void handleOnExitGround() {
-
-		if (stairManager.isOnStair() || 
-		    animator.GetBool("Jump") ||
-		    hurtManager.Hurting) {
-			return;
-		}
-		Debug.Log("Rapid Drop");
-		VerticalSpeed = DropVerticalSpeed;
-	}
-
-	// ============================================================================ //
-
-
-	IEnumerator Jump () {
-		// jump animation 
-		animator.SetBool ("Jump", true);
-		grounded = false;
-
-		VerticalSpeed = initVerticalSpeed;
-		yield return new WaitForSeconds (0.5f);
-		animator.SetBool ("Jump", false);	 
-	}
-
-
-	// switch the facing to adjust the animation
-	void FixedUpdate ()
+	void ThrowWeapon ()
     {
-		if (!stairManager.isOnStair())
-        {
-			normalFixedUpdate();
-		}
-
-		// transform facing update
-
-		if (animator.GetInteger("Speed") > 0 && !facingRight)
-			Flip();
-		if (animator.GetInteger("Speed") < 0 && facingRight)
-			Flip();
+        if      (!subWeaponManager.throwing && subWeaponManager.isCarrying && !whipAttManager.attacking) { StartCoroutine(subWeaponManager.Throw())  ;}
+        else if (!whipAttManager.attacking)                                                              { StartCoroutine(whipAttManager.WhipAttack());}
 	}
 
-	// without considering stairs 
-	void normalFixedUpdate() {
-		// if on Wall, let curVelo 
-		
-		if (collManager.isWallOn(Globals.Direction.Right)) {
+	public virtual void Hurt()
+    {
+        if (!hurtManager.Hurting && !animator.GetBool("Dead")) { StartCoroutine(hurtManager.Hurt());}
+	}
 
-			curHorizontalVelocity = curHorizontalVelocity > 0 ? 0 : curHorizontalVelocity;
-		}
-		if (collManager.isWallOn(Globals.Direction.Left)) {
-			curHorizontalVelocity = curHorizontalVelocity < 0 ? 0 : curHorizontalVelocity;
-		}
-		// Horizontal Update
-		if (collManager.isWallOn(Globals.Direction.Bottom)) {
-			if(VerticalSpeed < 0)
-			{
-				VerticalSpeed = 0;
-				
-				grounded = true;
-				animator.SetInteger("Speed", 0);
-
-//				float reviseHeight = collManager.curBoxTop - collider2D.bounds.min.y;
-
-				// Vertical overwrite update
-				transform.position = new Vector2 (
-					transform.position.x ,
-					collManager.curBoxTop + GetComponent<Collider2D>().bounds.size.y/2.0f
-					);
-			}
-		}
-		else {
-			grounded = false;
-		}
-		transform.position = new Vector2 (
-			transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime,
-			transform.position.y
-			);
-		// Vertical update
-		transform.position = new Vector2 (
-			transform.position.x ,
-			transform.position.y + VerticalSpeed * Time.fixedDeltaTime
-			);
-		if (!grounded)
-			VerticalSpeed += VerticalAccerlation*Time.fixedDeltaTime;
+	void handleOnExitGround()
+    {
+		if (animator.GetBool("Jump") ||hurtManager.Hurting) {return;}
+		VerticalSpeed = DropVerticalSpeed;
 	}
 
 	public void Flip()

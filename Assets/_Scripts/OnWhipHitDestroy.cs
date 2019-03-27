@@ -47,7 +47,7 @@ public class OnWhipHitDestroy : OnWhipEvent {
 				WhipAttackManager wamScript = 
 					GameObject.FindGameObjectWithTag(Globals.playerTag).GetComponent<WhipAttackManager>();
 
-				if(wamScript.whipLevel == 3)
+				if(wamScript.WeaponLevel == 3)
 				{
 					itemPrefab = randItems[1];
 				}

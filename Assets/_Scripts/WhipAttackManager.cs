@@ -1,79 +1,61 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WhipAttackManager : MonoBehaviour {
+public class WhipAttackManager : MonoBehaviour
+{
 
-	public int whipLevel = 1;
+	public int WeaponLevel = 1;
 	public LayerMask collideLayer;
 	[HideInInspector] 
 	public bool attacking;
 	[HideInInspector] 
-	public bool testDamage; // NOTICE: update in animation of all attacks 
+	public bool testDamage; 
 	private Animator animator;
-	private PlayerController playerControl;
+	private PlayerController CharacterController;
 
-	private string tag_attack = "Attack";
-	private float attackWaitInterval = 0.33f;
+	private float attackWait = 0.66f;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		animator = GetComponent<Animator> ();
-		playerControl = GetComponent<PlayerController> ();
+		CharacterController = GetComponent<PlayerController> ();
 		attacking = false;
 		testDamage = false;
 	}
-	
 
-	public IEnumerator WhipAttack() {
-		// stop if walking 
-		if (playerControl.grounded && animator.GetInteger("Speed") != 0) {
-			animator.SetInteger("Speed", 0);
-		}
+    void FixedUpdate()
+    {
+        
+        attacking = (animator.GetInteger("Attack") > 0);
+
+        if (testDamage)
+        {
+            Debug.Log("testing damage");
+            // collide with other 
+            // generate collider or do over raycast
+            // there is also a position y drift of squat
+
+            genWhipHit(0.04f);
+            genWhipHit(-0.02f);
+
+        }
+    }
+
+    public IEnumerator WhipAttack()
+    {
+		if (CharacterController.grounded && animator.GetInteger("Speed") != 0) {animator.SetInteger("Speed", 0);} // Speed à 0 car on veut pas qu'il bouge quand il attaque
 		attacking = true;
-		animator.SetInteger (tag_attack, whipLevel);
+		animator.SetInteger ("Attack", WeaponLevel);
 
-		float SEDelay = 0.15f;
-
-		yield return new WaitForSeconds(SEDelay);
+		yield return new WaitForSeconds(0.15f);
 
 		GameObject whipHitSE = Resources.Load (Globals.SEdir + "whipHitSE") as GameObject;
 		Instantiate (whipHitSE, transform.position, Quaternion.identity);
 
-		yield return new WaitForSeconds(attackWaitInterval - SEDelay);
-		animator.SetInteger (tag_attack, 0);
+		yield return new WaitForSeconds(attackWait - 0.15f);
+		animator.SetInteger ("Attack", 0);
 		attacking = false;
-
-
-	}
-	public void UpgradWhip () {
-		StartCoroutine (UpgradeWhipAnim ());
-	}
-
-	IEnumerator UpgradeWhipAnim() {
-		whipLevel++;
-		Time.timeScale = 0.2f;
-		animator.SetInteger("Speed", 0);
-		animator.SetBool ("PickUpWhip", true);
-		// TODO pause ?
-		yield return new WaitForSeconds (0.2f);
-		Time.timeScale = 1.0f;
-		animator.SetBool ("PickUpWhip", false);
-
-	}
-	void FixedUpdate() {
-		// for freeze the movement of Simon when attacking
-		attacking = (animator.GetInteger (tag_attack) > 0);	
-
-		if (testDamage) {
-			Debug.Log("testing damage");
-			// collide with other 
-			// generate collider or do over raycast
-			// there is also a position y drift of squat
-
-			genWhipHit(0.04f);
-			genWhipHit(-0.02f);
-
-		}
 	}
 
 	void genWhipHit(float yCorrection) {
@@ -102,18 +84,18 @@ public class WhipAttackManager : MonoBehaviour {
 
 	Vector3 WhipStart(float yCorrection) {
 		return new Vector3(
-			transform.position.x + Globals.PivotToWhipStart * (playerControl.facingRight ? 1.0f : -1.0f), 
+			transform.position.x + Globals.PivotToWhipStart * (CharacterController.facingRight ? 1.0f : -1.0f), 
 			transform.position.y + yCorrection + Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
 	}
 
 	Vector3 WhipEnd(Vector3 From) {
-		if (whipLevel <= 2)
+		if (WeaponLevel <= 2)
 			return new Vector3(
-				From.x + Globals.WhipLengthShort * (playerControl.facingRight ? 1.0f : -1.0f), 
+				From.x + Globals.WhipLengthShort * (CharacterController.facingRight ? 1.0f : -1.0f), 
 				From.y, 0);
 		else 
 			return new Vector3(
-				From.x + Globals.WhipLengthLong * (playerControl.facingRight ? 1.0f : -1.0f), 
+				From.x + Globals.WhipLengthLong * (CharacterController.facingRight ? 1.0f : -1.0f), 
 				From.y, 0);
 
 	}

@@ -93,7 +93,7 @@ public class LeoMotion : MonoBehaviour {
 	{
 		Debug.Log ("Player hitted");
 		PlayerController pcScript = gb.GetComponent<PlayerController> ();
-		pcScript.HandleHurt ();
+		pcScript.Hurt ();
 	}
 
 	public void Flip() {

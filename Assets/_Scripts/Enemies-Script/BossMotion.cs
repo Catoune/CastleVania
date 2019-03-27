@@ -158,7 +158,7 @@ public class BossMotion : OnWhipEvent {
 	{
 		Debug.Log ("Player hitted");
 		PlayerController pcScript = gb.GetComponent<PlayerController> ();
-		pcScript.HandleHurt ();
+		pcScript.Hurt ();
 	}
 }
 
