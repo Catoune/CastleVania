@@ -51,15 +51,8 @@ public class CollisionResolve : MonoBehaviour {
 		collIndex = collDepth.IndexOf(Mathf.Min(collDepth.ToArray()));
 
 		CollisionManager cmScript = collidedObj.GetComponent<CollisionManager>();
-		if (cmScript != null) {
-
-			if (collidedObj.tag == Globals.playerTag) {
-				StairManager smScript = collidedObj.GetComponent<StairManager>();
-				if(smScript && smScript.isOnStair())
-				{
-					collIndex = 3;
-				}
-			}
+		if (cmScript != null)
+        {
 			cmScript.playerCollisionEnter (collIndex, this.gameObject.GetComponent<Collider2D>().bounds.max.y);
 			collIdTable.Add(collidedObj.GetInstanceID(), collIndex);
 		}

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OnWhipHitDestroy : OnWhipEvent {
+public class OnWhipHitDestroy : OnWhipEvent
+{
 
 	public GameObject itemPrefab;
 

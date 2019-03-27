@@ -9,36 +9,26 @@ public class WhipAttackManager : MonoBehaviour
 	[HideInInspector] 
 	public bool attacking;
 	[HideInInspector] 
-	public bool testDamage; 
 	private Animator animator;
 	private PlayerController CharacterController;
 
 	private float attackWait = 0.66f;
 
-	// Use this for initialization
 	void Start ()
     {
 		animator = GetComponent<Animator> ();
 		CharacterController = GetComponent<PlayerController> ();
 		attacking = false;
-		testDamage = false;
 	}
 
     void FixedUpdate()
     {
-        
         attacking = (animator.GetInteger("Attack") > 0);
 
-        if (testDamage)
+        if (attacking)
         {
-            Debug.Log("testing damage");
-            // collide with other 
-            // generate collider or do over raycast
-            // there is also a position y drift of squat
-
-            genWhipHit(0.04f);
-            genWhipHit(-0.02f);
-
+            genWhipHit(0.16f);
+            genWhipHit(0.10f);
         }
     }
 
@@ -49,32 +39,35 @@ public class WhipAttackManager : MonoBehaviour
 		animator.SetInteger ("Attack", WeaponLevel);
 
 		yield return new WaitForSeconds(0.15f);
+        // C'est pour jouer le son
+        //GameObject whipHitSE = Resources.Load (Globals.SEdir + "whipHitSE") as GameObject;
+        //Instantiate (whipHitSE, transform.position, Quaternion.identity);
 
-		GameObject whipHitSE = Resources.Load (Globals.SEdir + "whipHitSE") as GameObject;
-		Instantiate (whipHitSE, transform.position, Quaternion.identity);
-
-		yield return new WaitForSeconds(attackWait - 0.15f);
+        yield return new WaitForSeconds(attackWait - 0.15f);
 		animator.SetInteger ("Attack", 0);
 		attacking = false;
 	}
 
-	void genWhipHit(float yCorrection) {
+	void genWhipHit(float yCorrection)
+    {
 		Vector3 From = WhipStart(yCorrection);
 		Vector3 To = WhipEnd(From);
 		// pixel correction +- heightOffset
 		genRayHit(From, To);
 	}
 
-
-
-	void genRayHit (Vector3 From, Vector3 To) {
+	void genRayHit (Vector3 From, Vector3 To)
+    {
 		RaycastHit2D[] hits = Physics2D.RaycastAll(From, (To-From).normalized, (To-From).magnitude, collideLayer);
 		Debug.Log("number of hits: " + hits.Length);
 		// Boardcast to all objects that has a WhipEventhandler
-		foreach (RaycastHit2D hit in hits) {
+		foreach (RaycastHit2D hit in hits)
+        {
 			GameObject gb = hit.transform.gameObject;
-			OnWhipEvent CC = gb.GetComponent<OnWhipEvent>();	
-			if (CC){
+			OnWhipEvent CC = gb.GetComponent<OnWhipEvent>();
+            Debug.Log(gb.name);
+			if (CC)
+            {
 				CC.onWhipEnter();
 			}
 		}
@@ -82,21 +75,19 @@ public class WhipAttackManager : MonoBehaviour
 	}
 
 
-	Vector3 WhipStart(float yCorrection) {
+	Vector3 WhipStart(float yCorrection)
+    {
 		return new Vector3(
-			transform.position.x + Globals.PivotToWhipStart * (CharacterController.facingRight ? 1.0f : -1.0f), 
-			transform.position.y + yCorrection + Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
+			CharacterController.transform.position.x + Globals.PivotToWhipStart * (CharacterController.facingRight ? 1.0f : -1.0f), 
+			CharacterController.transform.position.y + yCorrection + Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
 	}
 
-	Vector3 WhipEnd(Vector3 From) {
+	Vector3 WhipEnd(Vector3 From)
+    {
 		if (WeaponLevel <= 2)
-			return new Vector3(
-				From.x + Globals.WhipLengthShort * (CharacterController.facingRight ? 1.0f : -1.0f), 
-				From.y, 0);
+			return new Vector3(From.x + Globals.WhipLengthShort * (CharacterController.facingRight ? 1.0f : -1.0f), From.y, 0);
 		else 
-			return new Vector3(
-				From.x + Globals.WhipLengthLong * (CharacterController.facingRight ? 1.0f : -1.0f), 
-				From.y, 0);
+			return new Vector3(From.x + Globals.WhipLengthLong * (CharacterController.facingRight ? 1.0f : -1.0f), From.y, 0);
 
 	}
 
