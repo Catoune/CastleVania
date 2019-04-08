@@ -28,7 +28,7 @@ public class HolyWaterController : MonoBehaviour {
 			Instantiate (deathEffect, GetComponent<Collider2D>().bounds.center, Quaternion.identity);
 			Destroy(this.gameObject);
 		}
-		else if(collidedObj.tag == Globals.groundTag)
+		else if(collidedObj.tag == "Ground")
 		{
 			GameObject deathEffect = Resources.Load ("Prefab/holyFire") as GameObject;
 			Instantiate (deathEffect, GetComponent<Collider2D>().bounds.center, Quaternion.identity);

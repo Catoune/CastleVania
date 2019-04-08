@@ -150,7 +150,7 @@ public class ItemMotion : MonoBehaviour {
 			Debug.Log ("fetched Rosery, clear stage");
 
 
-			GameObject[] allEnemy = GameObject.FindGameObjectsWithTag(Globals.EnemyTag);
+			GameObject[] allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
 			foreach(GameObject enemy in allEnemy)
 			{
 				OnWhipEvent whipScript = enemy.GetComponent<OnWhipEvent>();

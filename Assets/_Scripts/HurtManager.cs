@@ -49,7 +49,7 @@ public class HurtManager : MonoBehaviour {
         pc.VerticalSpeed = 0; //reset to avoid fly high
         pc.VerticalSpeed += initHurtVericalSpeed;
         // add horizontal speed according to facing
-        pc.CurHorizontalVelocity = pc.facingRight ? -1 : 1;
+        pc.CurHorizontalVelocity = pc.isFacingRight ? -1 : 1;
 
         yield return new WaitForSeconds(0.33f);
         animator.SetBool("Hurt", false);

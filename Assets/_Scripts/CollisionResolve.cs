@@ -3,28 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class CollisionResolve : MonoBehaviour {
-
+public class CollisionResolve : MonoBehaviour
+{
 	private enum RDirection{Left, Right, Bottom, Top, None};
 
 	public int collIndex;
-	//private int playerCollIndex;
 	public Hashtable collIdTable = new Hashtable();
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
-	void OnTriggerEnter2D( Collider2D coll ) {
-		Debug.Log ("collided");
-
+	void OnTriggerEnter2D( Collider2D coll )
+    {
 		GameObject collidedObj = coll.gameObject;
-
 
 		// get the four corner points of both object
 		Vector2 objLL = collidedObj.GetComponent<Collider2D>().bounds.min;
@@ -33,8 +21,7 @@ public class CollisionResolve : MonoBehaviour {
 		Vector2 myUR = GetComponent<Collider2D>().bounds.max;
 			
 
-		List<float> collDepth = new List<float> (
-			new float[4] {float.MaxValue,float.MaxValue,float.MaxValue,float.MaxValue});
+		List<float> collDepth = new List<float> (new float[4] {float.MaxValue,float.MaxValue,float.MaxValue,float.MaxValue});
 
 //		if(objUR.x >= myLL.x && objLL.x <= myLL.x)             // Player on left
 			collDepth[0] = objUR.x - myLL.x;
@@ -58,10 +45,10 @@ public class CollisionResolve : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerExit2D( Collider2D coll ) {
+	void OnTriggerExit2D( Collider2D coll )
+    {
 		GameObject collidedObj = coll.gameObject; 
 		releaseItem (collidedObj);
-
 	}
 
 	void OnDestroy()
