@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 	public bool grounded;
 
     public float moveX;
+    public bool isMoving;
 
 	protected Animator animator;
 	private WhipAttackManager whipAttManager;
@@ -55,14 +56,17 @@ public class PlayerController : MonoBehaviour
         if(Input.GetAxis("Horizontal")>0)
         {
             RightDirection();
+            isMoving = true;
         }
         if (Input.GetAxis("Horizontal") < 0)
         {
             LeftDirection();
+            isMoving = true;
         }
         if (Input.GetAxis("Horizontal") == 0)
         {
             KeyUpH();
+            isMoving = false;
         }
         if(Input.GetAxis("Vertical") > 0.85)
         {
@@ -93,6 +97,15 @@ public class PlayerController : MonoBehaviour
 
         normalFixedUpdate();
     }
+
+
+    /*void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Stair")
+        {
+            
+        }
+    }*/
 
     void normalFixedUpdate()
     {
