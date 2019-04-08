@@ -3,16 +3,16 @@ using System.Collections;
 
 public class WhipAttackManager : MonoBehaviour
 {
+    [HideInInspector]
+    private PlayerController CharacterController;
+    [HideInInspector]
+    private Animator animator;
 
-	public int WeaponLevel = 1;
-	public LayerMask collideLayer;
-	[HideInInspector] 
+
+    [HideInInspector] 
 	public bool attacking;
-	[HideInInspector] 
-	private Animator animator;
-	private PlayerController CharacterController;
-
-	private float attackWait = 0.66f;
+    public int WeaponLevel = 1;
+    private float attackWait = 0.66f;
 
 	void Start ()
     {
@@ -39,7 +39,7 @@ public class WhipAttackManager : MonoBehaviour
 		animator.SetInteger ("Attack", WeaponLevel);
 
 		yield return new WaitForSeconds(0.15f);
-        // C'est pour jouer le son
+        // C'est pour jouer le son de l'attaque
         //GameObject whipHitSE = Resources.Load (Globals.SEdir + "whipHitSE") as GameObject;
         //Instantiate (whipHitSE, transform.position, Quaternion.identity);
 
@@ -52,20 +52,18 @@ public class WhipAttackManager : MonoBehaviour
     {
 		Vector3 From = WhipStart(yCorrection);
 		Vector3 To = WhipEnd(From);
-		// pixel correction +- heightOffset
 		genRayHit(From, To);
 	}
 
 	void genRayHit (Vector3 From, Vector3 To)
     {
-		RaycastHit2D[] hits = Physics2D.RaycastAll(From, (To-From).normalized, (To-From).magnitude, collideLayer);
-		Debug.Log("number of hits: " + hits.Length);
-		// Boardcast to all objects that has a WhipEventhandler
+		RaycastHit2D[] hits = Physics2D.RaycastAll(From, (To-From).normalized, (To-From).magnitude);
+
 		foreach (RaycastHit2D hit in hits)
         {
-			GameObject gb = hit.transform.gameObject;
+			GameObject gb  = hit.transform.gameObject      ;
 			OnWhipEvent CC = gb.GetComponent<OnWhipEvent>();
-            Debug.Log(gb.name);
+
 			if (CC)
             {
 				CC.onWhipEnter();
@@ -77,18 +75,15 @@ public class WhipAttackManager : MonoBehaviour
 
 	Vector3 WhipStart(float yCorrection)
     {
-		return new Vector3(
-			CharacterController.transform.position.x + Globals.PivotToWhipStart * (CharacterController.facingRight ? 1.0f : -1.0f), 
-			CharacterController.transform.position.y + yCorrection + Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
+		return new Vector3(CharacterController.transform.position.x + 0.00f                * (CharacterController.isFacingRight ? 1.0f : -1.0f   ), 
+                           CharacterController.transform.position.y + yCorrection + -0.05f * (animator.GetBool("Squat")         ? 1.0f : 0.0f), 0);
 	}
 
 	Vector3 WhipEnd(Vector3 From)
     {
 		if (WeaponLevel <= 2)
-			return new Vector3(From.x + Globals.WhipLengthShort * (CharacterController.facingRight ? 1.0f : -1.0f), From.y, 0);
+			return new Vector3(From.x + 0.32f *  (CharacterController.isFacingRight ? 1.0f : -1.0f), From.y, 0); //Shortest Weapon
 		else 
-			return new Vector3(From.x + Globals.WhipLengthLong * (CharacterController.facingRight ? 1.0f : -1.0f), From.y, 0);
-
+			return new Vector3(From.x + 0.54f *  (CharacterController.isFacingRight ? 1.0f : -1.0f), From.y, 0); //Longest Weapon
 	}
-
 }

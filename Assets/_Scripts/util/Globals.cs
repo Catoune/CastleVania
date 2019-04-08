@@ -1,21 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Globals : MonoBehaviour {
-
-	public static float WhipLengthLong = 0.54f; // 48 pixel
-	public static float WhipLengthShort = 0.32f;  // fixed
-	public static float PivotToWhipStart = 0.00f; // fixed
-	public static float SquatOffset = -0.05f; // 5 pixel 
-	public static float WhipHeightOffset = 0.05f;// 5 pixel
-	public static float playerWidth = 0.16f; // 16 pixelß
-
-
-
+public class Globals : MonoBehaviour
+{
 	public const string playerTag = "Player";
-	public const string groundTag = "Ground";
-	public const string MapTag = "Map";
-	public const string EnemyTag = "Enemy";
 
 	public const string SEdir = "Prefab/AudioObject/";
 
@@ -23,12 +11,7 @@ public class Globals : MonoBehaviour {
 	public const int maxBossHealth = 16;
 
 
-	public enum Direction {
-		Right, 
-		Left, 
-		Top, 
-		Bottom
-	};
+	public enum Direction {Right, Left, Top, Bottom};
 
 	public enum ItemName
 	{
@@ -40,17 +23,7 @@ public class Globals : MonoBehaviour {
 		ChickenLeg
 	}
 
-	public enum SubWeapon
-	{
-		Axe,
-		Dagger,
-		HolyWater,
-		StopWatch
-	}
+	public enum SubWeapon {Axe,Dagger,HolyWater,StopWatch}
 
-	void Awake()
-    {
-		Physics2D.queriesHitTriggers= true;
-	}
-
+	void Awake(){Physics2D.queriesHitTriggers= true;}
 }

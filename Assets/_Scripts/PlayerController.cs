@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
 
 	// [HideInInspector]
-	public bool facingRight = false;
+	public bool isFacingRight = false;
 	[HideInInspector]
 	public float VerticalSpeed;
 	// not on stairs curHorizontalVelocity * HorizonalSpeedScale
@@ -88,8 +88,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (animator.GetInteger("Speed") > 0 && !facingRight) { Flip() ;}
-        if (animator.GetInteger("Speed") < 0 &&  facingRight) { Flip() ;}
+        if (animator.GetInteger("Speed") > 0 && !isFacingRight) { Flip() ;}
+        if (animator.GetInteger("Speed") < 0 &&  isFacingRight) { Flip() ;}
 
         normalFixedUpdate();
     }
@@ -227,7 +227,7 @@ public class PlayerController : MonoBehaviour
 
 	public void Flip()
     {
-		facingRight = !facingRight;
+		isFacingRight = !isFacingRight;
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
