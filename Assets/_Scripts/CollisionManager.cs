@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class CollisionManager : MonoBehaviour {
-	
+public class CollisionManager : MonoBehaviour
+{
 
 	//corresponding to: RDirection{Right,Left, Top, Bottom};
 	public int[] wallStatus = new int[4] {0, 0, 0, 0}; // could be true on 0, 1, 2, 3;
