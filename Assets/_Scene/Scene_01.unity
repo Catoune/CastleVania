@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6554627}
   - component: {fileID: 6554628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,6 +197,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &12061608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12061609}
+  m_Layer: 0
+  m_Name: OneWayPlatforms
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12061609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12061608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -63.222748, y: -14.19535, z: -1.8583984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1442079031}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &25683763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48,
@@ -234,11 +265,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30938338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.63, y: 6.3500004, z: 0.2890625}
+  m_LocalPosition: {x: -26.629997, y: 6.3500004, z: 0.2890625}
   m_LocalScale: {x: 0.9625, y: 0.6248438, z: 1}
   m_Children: []
-  m_Father: {fileID: 1974361766}
-  m_RootOrder: 1
+  m_Father: {fileID: 1729431197}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &30938340
 SpriteRenderer:
@@ -276,7 +307,165 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &41275291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41275292}
+  - component: {fileID: 41275293}
+  m_Layer: 0
+  m_Name: SecondRoomADJ_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &41275292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41275291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.14, y: 2.673, z: 0.2890625}
+  m_LocalScale: {x: 0.13626797, y: 0.19265862, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1729431197}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &41275293
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41275291}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &52672291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 52672292}
+  - component: {fileID: 52672293}
+  m_Layer: 0
+  m_Name: ThirdRoomADJ_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &52672292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52672291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.71, y: 7.798, z: 0.2890625}
+  m_LocalScale: {x: 1.1596993, y: 0.20158198, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1803462810}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &52672293
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52672291}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -298,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66947454}
   - component: {fileID: 66947455}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 71410142}
   - component: {fileID: 71410143}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 121138533}
   - component: {fileID: 121138534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +1034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148423276}
   - component: {fileID: 148423277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +1113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155665168}
   - component: {fileID: 155665169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2061120, guid: 45b5d9b994e6e2643a0cf1d8ab204a80, type: 3}
       propertyPath: orthographic size
-      value: 0.4981737
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2061120, guid: 45b5d9b994e6e2643a0cf1d8ab204a80, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
@@ -1048,9 +1237,27 @@ PrefabInstance:
       propertyPath: far clip plane
       value: 999.38
       objectReference: {fileID: 0}
+    - target: {fileID: 2061120, guid: 45b5d9b994e6e2643a0cf1d8ab204a80, type: 3}
+      propertyPath: m_ClearFlags
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061120, guid: 45b5d9b994e6e2643a0cf1d8ab204a80, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061120, guid: 45b5d9b994e6e2643a0cf1d8ab204a80, type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11461120, guid: 45b5d9b994e6e2643a0cf1d8ab204a80, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45b5d9b994e6e2643a0cf1d8ab204a80, type: 3}
+--- !u!4 &155953284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461120, guid: 45b5d9b994e6e2643a0cf1d8ab204a80,
+    type: 3}
+  m_PrefabInstance: {fileID: 155953283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &173464607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1102,7 +1309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 174074529}
   - component: {fileID: 174074530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TowerBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182910212}
   - component: {fileID: 182910213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1354,11 +1561,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185487626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.84, y: 4.94, z: 0.2890625}
+  m_LocalPosition: {x: -6.84, y: 4.9400005, z: 0.2890625}
   m_LocalScale: {x: 0.09127896, y: 1.0751039, z: 1}
   m_Children: []
-  m_Father: {fileID: 1974361766}
-  m_RootOrder: 5
+  m_Father: {fileID: 1803462810}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &185487628
 SpriteRenderer:
@@ -1396,7 +1603,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1418,7 +1625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189680978}
   - component: {fileID: 189680977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,7 +1668,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: ea60d07d15b51e646bb06661d5e7a6e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1497,7 +1704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191154731}
   - component: {fileID: 191154732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LastCorridorBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 200662060}
   - component: {fileID: 200662061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,7 +1862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201698347}
   - component: {fileID: 201698348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1734,7 +1941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 205444477}
   - component: {fileID: 205444478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1954,7 +2161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275419226}
   - component: {fileID: 275419227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2118,7 +2325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 374970202}
   - component: {fileID: 374970203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2203,7 +2410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382127812}
   - component: {fileID: 382127813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2300,8 +2507,8 @@ Transform:
   m_LocalPosition: {x: -13.687, y: 5.24, z: 0.2890625}
   m_LocalScale: {x: 0.287028, y: 0.215864, z: 1}
   m_Children: []
-  m_Father: {fileID: 1974361766}
-  m_RootOrder: 2
+  m_Father: {fileID: 1729431197}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &399405570
 SpriteRenderer:
@@ -2339,7 +2546,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2411,7 +2618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 409744407}
   - component: {fileID: 409744408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_07 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2490,7 +2697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410671059}
   - component: {fileID: 410671060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 427259443}
   - component: {fileID: 427259442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2751,7 +2958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464444569}
   - component: {fileID: 464444570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2830,7 +3037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467209005}
   - component: {fileID: 467209006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2915,7 +3122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477200232}
   - component: {fileID: 477200233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3091,7 +3298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491982821}
   - component: {fileID: 491982822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3227,7 +3434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507597497}
   - component: {fileID: 507597498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3788,7 +3995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622264056}
   - component: {fileID: 622264057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3857,6 +4064,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &626686533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626686535}
+  - component: {fileID: 626686534}
+  - component: {fileID: 626686537}
+  - component: {fileID: 626686536}
+  m_Layer: 0
+  m_Name: FallingPlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &626686534
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626686533}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0310015291bf1ea4aaa0b965fc6019ee, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &626686535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626686533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.225, y: -13.808, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &626686536
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626686533}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 2
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 5
+--- !u!61 &626686537
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626686533}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.16}
+    newSize: {x: 0.32, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!4 &652520900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 495404, guid: 76228d1e12d9d4c1e867ff25915b392d,
@@ -3879,7 +4214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 664331803}
   - component: {fileID: 664331804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3958,7 +4293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 670014397}
   - component: {fileID: 670014396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4037,7 +4372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676081367}
   - component: {fileID: 676081368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4106,6 +4441,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &688582686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688582687}
+  - component: {fileID: 688582688}
+  m_Layer: 0
+  m_Name: ThirdRoomADJ_05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &688582687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688582686}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.61, y: 7.798, z: 0.2890625}
+  m_LocalScale: {x: 1.1596993, y: 0.20158198, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1803462810}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &688582688
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688582686}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &692099756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48,
@@ -4122,7 +4536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693861182}
   - component: {fileID: 693861183}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4242,6 +4656,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 934552574}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &748340977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748340978}
+  - component: {fileID: 748340980}
+  - component: {fileID: 748340979}
+  m_Layer: 0
+  m_Name: BackgorundCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748340978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748340977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 155953284}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &748340979
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748340977}
+  m_Enabled: 0
+--- !u!20 &748340980
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748340977}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 0.7
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &761932825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4252,7 +4748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 761932826}
   - component: {fileID: 761932827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4506,7 +5002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815216465}
   - component: {fileID: 815216466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4591,7 +5087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831567235}
   - component: {fileID: 831567236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4670,7 +5166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849370140}
   - component: {fileID: 849370141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4739,6 +5235,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &850833802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850833803}
+  - component: {fileID: 850833804}
+  m_Layer: 0
+  m_Name: ThirdRoomADJ_06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &850833803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850833802}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.52, y: 8.41, z: 0.2890625}
+  m_LocalScale: {x: 1.1596993, y: 0.34410673, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1803462810}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &850833804
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850833802}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &852404119
 GameObject:
   m_ObjectHideFlags: 0
@@ -4802,6 +5377,164 @@ Transform:
   m_Father: {fileID: 1826101032}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &898909914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898909915}
+  - component: {fileID: 898909916}
+  m_Layer: 0
+  m_Name: OutsideADJ_06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &898909915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898909914}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.41, y: 1.05, z: 2.0078125}
+  m_LocalScale: {x: 0.058952697, y: 0.6024879, z: 0.90936}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &898909916
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898909914}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &899272212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899272213}
+  - component: {fileID: 899272214}
+  m_Layer: 0
+  m_Name: OutsideADJ_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899272213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899272212}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.8, y: -3.5, z: 2.0078125}
+  m_LocalScale: {x: 0.10248029, y: 0.593919, z: 0.90936}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &899272214
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899272212}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &911632791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48,
@@ -4875,7 +5608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918356821}
   - component: {fileID: 918356822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4954,7 +5687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921461033}
   - component: {fileID: 921461034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5237,6 +5970,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85f1d22876a8746388fc3908cb335e48, type: 3}
+--- !u!1 &967779541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967779542}
+  - component: {fileID: 967779543}
+  m_Layer: 0
+  m_Name: OutsideADJ_07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &967779542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967779541}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.07, y: -0.005, z: 2.0078125}
+  m_LocalScale: {x: 1.5982268, y: 0.18074638, z: 0.90936}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &967779543
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967779541}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &974580447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48,
@@ -5332,7 +6144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1020146788}
   - component: {fileID: 1020146789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5411,7 +6223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050471388}
   - component: {fileID: 1050471389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5651,7 +6463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108821612}
   - component: {fileID: 1108821613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5804,7 +6616,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -34.21, y: 6.3500004, z: 0.2890625}
   m_LocalScale: {x: 0.9625, y: 0.6248438, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1602373587}
+  - {fileID: 1528595218}
   m_Father: {fileID: 1974361766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5866,7 +6680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1155077988}
   - component: {fileID: 1155077989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5945,7 +6759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156286977}
   - component: {fileID: 1156286978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6024,7 +6838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157545793}
   - component: {fileID: 1157545794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6103,7 +6917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161714381}
   - component: {fileID: 1161714382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6188,7 +7002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181671796}
   - component: {fileID: 1181671795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6282,11 +7096,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181725238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.48, y: 4.89, z: 0.2890625}
+  m_LocalPosition: {x: -12.48, y: 4.8899994, z: 0.2890625}
   m_LocalScale: {x: 0.058706198, y: 1.0751039, z: 1}
   m_Children: []
-  m_Father: {fileID: 1974361766}
-  m_RootOrder: 4
+  m_Father: {fileID: 1803462810}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1181725240
 SpriteRenderer:
@@ -6324,7 +7138,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6346,7 +7160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186038038}
   - component: {fileID: 1186038039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6476,7 +7290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1243496202}
   - component: {fileID: 1243496203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6545,12 +7359,133 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1255804493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255804494}
+  - component: {fileID: 1255804495}
+  m_Layer: 0
+  m_Name: OutsideADJ_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1255804494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255804493}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.47, y: -2.536, z: 2.0078125}
+  m_LocalScale: {x: 0.32793695, y: 0.19053039, z: 0.90936}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1255804495
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255804493}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &1263889364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48,
     type: 3}
   m_PrefabInstance: {fileID: 569298357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302571144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302571145}
+  m_Layer: 0
+  m_Name: OutsideADJ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302571145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302571144}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.1251984, y: 2.6512804, z: -1.71875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1741985874}
+  - {fileID: 1664187170}
+  - {fileID: 1936098701}
+  - {fileID: 2074552275}
+  - {fileID: 1786735733}
+  - {fileID: 898909915}
+  - {fileID: 967779542}
+  - {fileID: 1861300498}
+  - {fileID: 1661581095}
+  - {fileID: 1255804494}
+  - {fileID: 899272213}
+  - {fileID: 1535286699}
+  m_Father: {fileID: 1974361766}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316797132
 GameObject:
   m_ObjectHideFlags: 0
@@ -6561,7 +7496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316797133}
   - component: {fileID: 1316797134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6794,7 +7729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1349198897}
   - component: {fileID: 1349198898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6952,7 +7887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1395236500}
   - component: {fileID: 1395236501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7031,7 +7966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402626359}
   - component: {fileID: 1402626360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7110,7 +8045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1409227839}
   - component: {fileID: 1409227840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7269,6 +8204,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85f1d22876a8746388fc3908cb335e48, type: 3}
+--- !u!4 &1442079031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+    type: 3}
+  m_PrefabInstance: {fileID: 8780433261216034100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1478395613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478395614}
+  - component: {fileID: 1478395615}
+  m_Layer: 0
+  m_Name: SecondRoomADJ_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1478395614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478395613}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -22.05, y: 2.67, z: 0.2890625}
+  m_LocalScale: {x: 1.9466853, y: 0.19265862, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1729431197}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1478395615
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478395613}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1481551811
 GameObject:
   m_ObjectHideFlags: 0
@@ -7364,7 +8384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495590789}
   - component: {fileID: 1495590790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_05 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7421,7 +8441,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: ea60d07d15b51e646bb06661d5e7a6e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7515,6 +8535,164 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8e943d17d5534d01a8822521b54d766, type: 3}
+--- !u!1 &1528595217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528595218}
+  - component: {fileID: 1528595219}
+  m_Layer: 0
+  m_Name: FirstRoomADJ_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1528595218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528595217}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.27, y: -10.12, z: 0}
+  m_LocalScale: {x: 6.711854, y: 0.380095, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1140282984}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1528595219
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528595217}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1535286698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535286699}
+  - component: {fileID: 1535286700}
+  m_Layer: 0
+  m_Name: OutsideADJ_12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1535286699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535286698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.022, y: -5.099, z: 2.0078125}
+  m_LocalScale: {x: 0.7387869, y: 0.19302367, z: 0.90936}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1535286700
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535286698}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1540483216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7617,7 +8795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548006074}
   - component: {fileID: 1548006073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7810,7 +8988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1584070125}
   - component: {fileID: 1584070126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpperCorridorBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7889,7 +9067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1593914978}
   - component: {fileID: 1593914977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7958,6 +9136,85 @@ Transform:
   m_Father: {fileID: 1742016064}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1602373586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1602373587}
+  - component: {fileID: 1602373588}
+  m_Layer: 0
+  m_Name: FirstRoomADJ_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1602373587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602373586}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.691, y: -5.19, z: 0}
+  m_LocalScale: {x: 0.20779221, y: 1.6004001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1140282984}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1602373588
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602373586}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1603085739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8113,7 +9370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649396820}
   - component: {fileID: 1649396821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8182,6 +9439,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1661581094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661581095}
+  - component: {fileID: 1661581096}
+  m_Layer: 0
+  m_Name: OutsideADJ_09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661581095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661581094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.619, y: -2.536, z: 2.0078125}
+  m_LocalScale: {x: 0.32793695, y: 0.19053039, z: 0.90936}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1661581096
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661581094}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1664187169
 GameObject:
   m_ObjectHideFlags: 0
@@ -8207,11 +9543,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664187169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.74, y: -2.448, z: 0.2890625}
+  m_LocalPosition: {x: 23.865198, y: -5.0992804, z: 2.0078125}
   m_LocalScale: {x: 0.32013246, y: 0.19990213, z: 1}
   m_Children: []
-  m_Father: {fileID: 1974361766}
-  m_RootOrder: 7
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1664187171
 SpriteRenderer:
@@ -8249,7 +9585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8271,7 +9607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666358857}
   - component: {fileID: 1666358858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8401,7 +9737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699927111}
   - component: {fileID: 1699927112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8480,7 +9816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702355899}
   - component: {fileID: 1702355900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8600,7 +9936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709099543}
   - component: {fileID: 1709099544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8685,7 +10021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1722683604}
   - component: {fileID: 1722683605}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8754,6 +10090,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1729431196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729431197}
+  m_Layer: 0
+  m_Name: SecondRoomADJ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1729431197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729431196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 30938339}
+  - {fileID: 399405569}
+  - {fileID: 1478395614}
+  - {fileID: 41275292}
+  m_Father: {fileID: 1974361766}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733718254
 GameObject:
   m_ObjectHideFlags: 0
@@ -8764,7 +10134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733718255}
   - component: {fileID: 1733718256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8843,7 +10213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734805254}
   - component: {fileID: 1734805255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8937,11 +10307,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741985873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.35, y: 0.11, z: 0.2890625}
+  m_LocalPosition: {x: 22.475199, y: -2.5412807, z: 2.0078125}
   m_LocalScale: {x: 0.09127896, y: 0.19990213, z: 1}
   m_Children: []
-  m_Father: {fileID: 1974361766}
-  m_RootOrder: 6
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1741985875
 SpriteRenderer:
@@ -8979,7 +10349,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9099,11 +10469,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755472557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.807, y: 8.03, z: 0.2890625}
+  m_LocalPosition: {x: -10.806999, y: 8.03, z: 0.2890625}
   m_LocalScale: {x: 0.287028, y: 0.215864, z: 1}
   m_Children: []
-  m_Father: {fileID: 1974361766}
-  m_RootOrder: 3
+  m_Father: {fileID: 1803462810}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1755472559
 SpriteRenderer:
@@ -9141,7 +10511,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9163,7 +10533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758425521}
   - component: {fileID: 1758425522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9300,6 +10670,85 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 11424844, guid: d1eed0169f5a942f0a9278b94f5d99c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d1eed0169f5a942f0a9278b94f5d99c5, type: 3}
+--- !u!1 &1786735732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786735733}
+  - component: {fileID: 1786735734}
+  m_Layer: 0
+  m_Name: OutsideADJ_05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1786735733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786735732}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.456, y: 2.294, z: 2.0078125}
+  m_LocalScale: {x: 0.39894632, y: 0.08149331, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1786735734
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786735732}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &1792152044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48,
@@ -9351,6 +10800,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85f1d22876a8746388fc3908cb335e48, type: 3}
+--- !u!1 &1803462809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803462810}
+  m_Layer: 0
+  m_Name: ThridRoomADJ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1803462810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803462809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1755472558}
+  - {fileID: 1181725239}
+  - {fileID: 185487627}
+  - {fileID: 52672292}
+  - {fileID: 688582687}
+  - {fileID: 850833803}
+  m_Father: {fileID: 1974361766}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823173346
 GameObject:
   m_ObjectHideFlags: 0
@@ -9361,7 +10846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823173347}
   - component: {fileID: 1823173348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9476,6 +10961,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1682102200}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1861300497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861300498}
+  - component: {fileID: 1861300499}
+  m_Layer: 0
+  m_Name: OutsideADJ_08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1861300498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861300497}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.887, y: -1.226, z: 2.0078125}
+  m_LocalScale: {x: 0.06086997, y: 0.68970275, z: 0.90936}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1861300499
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861300497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1867029347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9572,7 +11136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880159330}
   - component: {fileID: 1880159331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9651,7 +11215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895930598}
   - component: {fileID: 1895930599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9730,7 +11294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905461523}
   - component: {fileID: 1905461522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9809,7 +11373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1913471764}
   - component: {fileID: 1913471765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9888,7 +11452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923693682}
   - component: {fileID: 1923693683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10046,7 +11610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1931384214}
   - component: {fileID: 1931384215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10148,6 +11712,85 @@ Transform:
   m_Father: {fileID: 1826101032}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1936098700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936098701}
+  - component: {fileID: 1936098702}
+  m_Layer: 0
+  m_Name: OutsideADJ_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936098701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936098700}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.69, y: 0.03, z: 2.0078125}
+  m_LocalScale: {x: 1.4927177, y: 0.19990213, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1936098702
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936098700}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1948996287
 GameObject:
   m_ObjectHideFlags: 0
@@ -10158,7 +11801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948996288}
   - component: {fileID: 1948996289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10300,13 +11943,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1140282984}
-  - {fileID: 30938339}
-  - {fileID: 399405569}
-  - {fileID: 1755472558}
-  - {fileID: 1181725239}
-  - {fileID: 185487627}
-  - {fileID: 1741985874}
-  - {fileID: 1664187170}
+  - {fileID: 1729431197}
+  - {fileID: 1803462810}
+  - {fileID: 1302571145}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10326,7 +11965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007525373}
   - component: {fileID: 2007525374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10405,7 +12044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023732932}
   - component: {fileID: 2023732933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10484,7 +12123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2033124031}
   - component: {fileID: 2033124032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10608,7 +12247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2041167877}
   - component: {fileID: 2041167878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10687,7 +12326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044174658}
   - component: {fileID: 2044174659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_24 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10772,7 +12411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069410800}
   - component: {fileID: 2069410801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game Boy Advance - Castlevania Aria of Sorrow - Castle Corridor_02 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10836,6 +12475,85 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &2074552274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074552275}
+  - component: {fileID: 2074552276}
+  m_Layer: 0
+  m_Name: OutsideADJ_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074552275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074552274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.274, y: 1.03, z: 2.0078125}
+  m_LocalScale: {x: 0.115219146, y: 0.5926786, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1302571145}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2074552276
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074552274}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 0d3de117033afe443a730f792287490d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11175,3 +12893,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caa1925e3ab76bd4f9a11b8ef743286e, type: 3}
+--- !u!1001 &8780433261216034100
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 12061609}
+    m_Modifications:
+    - target: {fileID: 8780433260350671874, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_Name
+      value: OWPlatform_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5077
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780433260350671875, guid: 22ec9e7466b875c488d832956da8df04,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22ec9e7466b875c488d832956da8df04, type: 3}
