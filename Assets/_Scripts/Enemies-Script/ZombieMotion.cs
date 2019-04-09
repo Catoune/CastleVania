@@ -1,29 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZombieMotion : MonoBehaviour {
+public class ZombieMotion : MonoBehaviour
+{
+	private Vector2 monsterSpeed = new Vector2 (-0.007f, -0.015f);
+    private Vector2 speed;
+    private float timeToDie = 1.0f;
 
-	private Vector2 defaultSpeed = new Vector2 (-0.007f, -0.015f);
-	private const float perishInSec = 1.0f;
-
-	private Vector2 speed;
 	public bool isMoveLeft = true;
 
-	// Use this for initialization
 	void Start ()
     {
-		GameObject playerObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
-		
-		if(playerObj.transform.position.x > transform.position.x)
-		{
-			isMoveLeft = false;
-			Flip();
-		}
+		GameObject player = GameObject.FindGameObjectWithTag (Globals.playerTag);
 
-		if (!isMoveLeft)
-			defaultSpeed.x *= -1;
+        if (player.transform.position.x > transform.position.x)
+        {
+            isMoveLeft = false;
+            Flip();
+        }
+        if (!isMoveLeft) { monsterSpeed.x *= -1; }
 
-		speed = new Vector2(0.0f, defaultSpeed.y);
+		speed = new Vector2(0.0f, monsterSpeed.y);
 	}
 
 	public void Flip()
@@ -33,8 +30,7 @@ public class ZombieMotion : MonoBehaviour {
 		transform.localScale = theScale;	
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate ()
+	void FixedUpdate()
     {
 		move ();
 	}
@@ -52,41 +48,51 @@ public class ZombieMotion : MonoBehaviour {
 			if(cmScript.isWallOn(Globals.Direction.Bottom))
 			{
 				speed.y = 0;
-				speed.x = defaultSpeed.x;
-				if(cmScript.isWallOn(Globals.Direction.Left))
+				speed.x = monsterSpeed.x;
+				/*if(cmScript.isWallOn(Globals.Direction.Left))
 				{
 					speed.x = 0;
 					StartCoroutine (autoDie());
-				}
+				}*/
 			}
 			else
 			{
 				speed.x = 0;
-				speed.y = defaultSpeed.y;
+				speed.y = monsterSpeed.y;
 			}
 		}
 	}
 
-	
-	void OnTriggerEnter2D( Collider2D coll ) {
+	void OnTriggerEnter2D( Collider2D coll )
+    {
 		GameObject collidedObj = coll.gameObject;
 		if (collidedObj.tag == Globals.playerTag) 
 		{
 			onPlayerEnter(coll.gameObject);		              
 		}
-	}
-	
-	
-	IEnumerator autoDie()
+
+        if (coll.gameObject.tag == "Stair")
+        {
+            if (!isMoveLeft)
+            {
+                this.transform.position = new Vector3(transform.position.x + 0.099f, transform.position.y + 0.1f, transform.position.z);
+            }
+            else
+            {
+                this.transform.position = new Vector3(transform.position.x + -0.099f, transform.position.y + 0.1f, transform.position.z);
+            }
+        }
+    }
+
+    IEnumerator autoDie()
 	{
-		yield return new WaitForSeconds(perishInSec);
+		yield return new WaitForSeconds(timeToDie);
 		Destroy (this.gameObject);
 	}
 	
 	void onPlayerEnter(GameObject gb)
 	{
-		Debug.Log ("Player hitted");
-		PlayerController pcScript = gb.GetComponent<PlayerController> ();
-		pcScript.Hurt ();
+        PlayerController pcScript = gb.GetComponent<PlayerController>();
+        pcScript.Hurt ();
 	}
 }

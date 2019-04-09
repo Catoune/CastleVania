@@ -4,7 +4,7 @@ using System.Collections;
 public class HurtManager : MonoBehaviour {
 
 	public float InvisibleInterval = 1.0f;
-	public float initHurtVericalSpeed = 1.0f;
+	public float initHurtVerticalSpeed = 1.0f;
 
 	private bool hurting; // only provide accessor
 	public bool Hurting {
@@ -47,9 +47,9 @@ public class HurtManager : MonoBehaviour {
 
         animator.SetBool("Hurt", true);
         pc.VerticalSpeed = 0; //reset to avoid fly high
-        pc.VerticalSpeed += initHurtVericalSpeed;
+        pc.VerticalSpeed += initHurtVerticalSpeed;
         // add horizontal speed according to facing
-        pc.CurHorizontalVelocity = pc.isFacingRight ? -1 : 1;
+        pc.HorizontalVelocity = pc.isFacingRight ? -1 : 1;
 
         yield return new WaitForSeconds(0.33f);
         animator.SetBool("Hurt", false);
@@ -59,7 +59,7 @@ public class HurtManager : MonoBehaviour {
         animator.SetInteger("Speed", 0);
 
         yield return new WaitForSeconds(0f);
-        pc.CurHorizontalVelocity = 0;
+        pc.HorizontalVelocity = 0;
         disableControl = false;
     }
 	

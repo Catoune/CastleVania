@@ -3,46 +3,33 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-	public float jumpHeight = 2.0f;
-	public float HorizonalSpeedScale; // define in editor
-	public float initVerticalSpeed;
-	public float DropVerticalSpeed;
-	public float StairStepLength; // absolute value.
-	public float VerticalAccerlation;
-
-
-	// [HideInInspector]
+	[HideInInspector]
 	public bool isFacingRight = false;
-	[HideInInspector]
-	public float VerticalSpeed;
-	// not on stairs curHorizontalVelocity * HorizonalSpeedScale
-	// on stairs, a constant value, involving +-
-	[HideInInspector]
-	public float HorizontalSpeed; 
-	public bool grounded;
+    public bool grounded             ;
+    public bool isMoving             ;
 
-    public float moveX;
+    public float VerticalSpeed;
+   
+	protected Animator          animator        ;
+    protected CollisionManager  collManager     ;
+    private   WhipAttackManager whipAttManager  ;
+	private   SubWeaponManager  subWeaponManager;
+	private   HurtManager       hurtManager     ;
+	private int horizontalVelocity = 0; // should only have values -1, 0, 1
 
-	protected Animator animator;
-	private WhipAttackManager whipAttManager;
-	protected CollisionManager collManager;
-	private SubWeaponManager subWeaponManager;
-	private HurtManager hurtManager;
-	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
-
-	public int CurHorizontalVelocity
+	public int HorizontalVelocity
 	{
-		get{return curHorizontalVelocity ;}
-		set{curHorizontalVelocity = value;}
+		get{return horizontalVelocity ;}
+		set{horizontalVelocity = value;}
 	}
 
 	void Start ()
     {
-		animator = GetComponent<Animator> ();
-		whipAttManager = GetComponent<WhipAttackManager> ();
-		collManager = GetComponent<CollisionManager> ();
+		animator         = GetComponent<Animator>         ();
+		whipAttManager   = GetComponent<WhipAttackManager>();
+		collManager      = GetComponent<CollisionManager> ();
 		subWeaponManager = GetComponent<SubWeaponManager> ();
-		hurtManager = GetComponent<HurtManager> ();
+		hurtManager      = GetComponent<HurtManager>      ();
 
 		collManager.ExitGround += handleOnExitGround;
 		Flip ();
@@ -50,40 +37,28 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!animator.GetBool("Hurt")){curHorizontalVelocity = animator.GetInteger("Speed");}
+        if (!animator.GetBool("Hurt")){horizontalVelocity = animator.GetInteger("Speed");}
 
         if(Input.GetAxis("Horizontal")>0)
         {
             RightDirection();
+            isMoving = true;
         }
         if (Input.GetAxis("Horizontal") < 0)
         {
             LeftDirection();
+            isMoving = true;
         }
         if (Input.GetAxis("Horizontal") == 0)
         {
-            KeyUpH();
+            ButtonUpH();
+            isMoving = false;
         }
-        if(Input.GetAxis("Vertical") > 0.85)
-        {
-            CrounchOn();
-        }
-        if (Input.GetAxis("Vertical") == 0)
-        {
-            CrounchOff();
-        }
-        if (Input.GetButtonDown("Jump"))
-        {
-            JumpButton();
-        }
-        if(Input.GetButtonDown("Attack"))
-        {
-            Attack();
-        }
-        if(Input.GetButtonDown("Attack") && (Input.GetAxis("Vertical") < 0))
-        {
-            ThrowWeapon();
-        }
+        if (Input.GetAxis("Vertical") > 0.85){ CrounchOn();}
+        if (Input.GetAxis("Vertical") ==   0){CrounchOff();}
+        if (Input.GetButtonDown("Jump"  )   ){JumpButton();}
+        if (Input.GetButtonDown("Attack")   ){    Attack();}
+        if (Input.GetButtonDown("Attack") && (Input.GetAxis("Vertical") < 0)){ThrowWeapon();}
     }
 
     void FixedUpdate()
@@ -96,14 +71,14 @@ public class PlayerController : MonoBehaviour
 
     void normalFixedUpdate()
     {
-        if (collManager.isWallOn(Globals.Direction.Right))
+        /*if (collManager.isWallOn(Globals.Direction.Right))
         {
             curHorizontalVelocity = curHorizontalVelocity > 0 ? 0 : curHorizontalVelocity;
         }
         if (collManager.isWallOn(Globals.Direction.Left))
         {
             curHorizontalVelocity = curHorizontalVelocity < 0 ? 0 : curHorizontalVelocity;
-        }
+        }*/
 
         // Horizontal Update
         if (collManager.isWallOn(Globals.Direction.Bottom))
@@ -115,7 +90,7 @@ public class PlayerController : MonoBehaviour
                 grounded = true;
                 animator.SetInteger("Speed", 0);
 
-                //				float reviseHeight = collManager.curBoxTop - collider2D.bounds.min.y;
+                //	float reviseHeight = collManager.curBoxTop - collider2D.bounds.min.y;
 
                 // Vertical overwrite update
                 /*transform.position = new Vector2(
@@ -128,36 +103,31 @@ public class PlayerController : MonoBehaviour
         {
             grounded = false;
         }
-        transform.position = new Vector2(transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime, transform.position.y);
-        // Vertical update
-       transform.position = new Vector2(
-            transform.position.x,
-            transform.position.y + VerticalSpeed * Time.fixedDeltaTime
-            );
-        if (!grounded)
-            VerticalSpeed += VerticalAccerlation * Time.fixedDeltaTime;
+        transform.position = new Vector2(transform.position.x + horizontalVelocity * 0.7f * Time.fixedDeltaTime, transform.position.y);
+        transform.position = new Vector2(transform.position.x,transform.position.y + VerticalSpeed * Time.fixedDeltaTime             );
+        if (!grounded) { VerticalSpeed += -5.1f * Time.fixedDeltaTime;}
     }
 
-    void KeyUpH ()
+    void ButtonUpH ()
 	{
-		if (!grounded)                  { return                          ;}
-		if (curHorizontalVelocity != 0) { animator.SetInteger("Speed", 0) ;}
+		if (!grounded)               { return                          ;}
+		if (horizontalVelocity != 0) { animator.SetInteger("Speed", 0) ;}
 	}
 
 	void RightDirection ()
     {
         if (!grounded || whipAttManager.attacking || animator.GetBool("Squat")) {return;}
-		if (curHorizontalVelocity == 0)       {animator.SetInteger("Speed", 1);}
-		else if (curHorizontalVelocity == 1)  {                               ;}
-		else if (curHorizontalVelocity == -1) {animator.SetInteger("Speed", 0);}
+		if (horizontalVelocity == 0)       {animator.SetInteger("Speed", 1);}
+		else if (horizontalVelocity == 1)  {                               ;}
+		else if (horizontalVelocity == -1) {animator.SetInteger("Speed", 0);}
 	}
 
 	void LeftDirection ()
     {
         if      (!grounded || whipAttManager.attacking || hurtManager.onFlyHurting() || animator.GetBool("Squat")) {return;}
-		if      (curHorizontalVelocity == 0) {animator.SetInteger("Speed", -1);}
-		else if (curHorizontalVelocity == 1) {animator.SetInteger("Speed",  0);}
-		else if (curHorizontalVelocity == -1) {;}
+		if      (horizontalVelocity == 0) {animator.SetInteger("Speed", -1);}
+		else if (horizontalVelocity == 1) {animator.SetInteger("Speed",  0);}
+		else if (horizontalVelocity == -1){                                ;}
 	}
 
 	void KeyDownUp ()
@@ -168,18 +138,17 @@ public class PlayerController : MonoBehaviour
     //Jump
 	void JumpButton ()
     {
-		if (grounded 
-		    && !animator.GetBool("Squat")
-		    && !animator.GetBool("Jump")
-		    && !whipAttManager.attacking)
-			StartCoroutine(Jump());
+        if (grounded  && !animator.GetBool("Squat")
+                      && !animator.GetBool("Jump" )
+                      && !whipAttManager.attacking)
+        {StartCoroutine(Jump());}
 	}
 
     IEnumerator Jump()
     {
         animator.SetBool("Jump", true);
         grounded = false;
-        VerticalSpeed = initVerticalSpeed;
+        VerticalSpeed = 2f;
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("Jump", false);
     }
@@ -187,7 +156,7 @@ public class PlayerController : MonoBehaviour
     //Attaque du Personnage
     void Attack ()
     {
-        if (!whipAttManager.attacking) { StartCoroutine(whipAttManager.WhipAttack()); }
+        if (!whipAttManager.attacking) { StartCoroutine(whipAttManager.WhipAttack());}
 	}
 
 	
@@ -195,11 +164,8 @@ public class PlayerController : MonoBehaviour
 	void CrounchOn ()
     {
         animator.SetInteger("Speed", 0);
-        if (!grounded || whipAttManager.attacking)   {return;}
-        else
-        {
-            animator.SetBool("Squat", true);
-        }		
+        if (!grounded || whipAttManager.attacking)   {return                         ;}
+        else                                         {animator.SetBool("Squat", true);}		
 	}
 
     //Se relever
@@ -208,9 +174,10 @@ public class PlayerController : MonoBehaviour
 		animator.SetBool ("Squat", false);
 	}
 
+    //Jeter des armes secondaires (A SUPPRIMER SI INUTILE)
 	void ThrowWeapon ()
     {
-        if      (!subWeaponManager.throwing && subWeaponManager.isCarrying && !whipAttManager.attacking) { StartCoroutine(subWeaponManager.Throw())  ;}
+        if      (!subWeaponManager.throwing && subWeaponManager.isCarrying && !whipAttManager.attacking) { StartCoroutine(subWeaponManager.Throw())   ;}
         else if (!whipAttManager.attacking)                                                              { StartCoroutine(whipAttManager.WhipAttack());}
 	}
 
@@ -222,7 +189,7 @@ public class PlayerController : MonoBehaviour
 	void handleOnExitGround()
     {
 		if (animator.GetBool("Jump") ||hurtManager.Hurting) {return;}
-		VerticalSpeed = DropVerticalSpeed;
+		VerticalSpeed = -5f;
 	}
 
 	public void Flip()
