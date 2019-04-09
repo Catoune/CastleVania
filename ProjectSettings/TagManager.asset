@@ -10,8 +10,6 @@ TagManager:
   - Map
   - Boss
   - Input
-  - Stair
-  - StairDetector
   layers:
   - Default
   - TransparentFX
@@ -21,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - BackgroundParallax
   - 
   - 
   - 
