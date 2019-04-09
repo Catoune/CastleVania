@@ -13,7 +13,7 @@ public class OneWayPlatforms : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton("joystick button 2"))
+        if (Input.GetButton("Effector"))
         {
             effector.rotationalOffset = 180f;
         }
