@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GoingToHell : MonoBehaviour {
-
-	// Use this for initialization
-	void OnTriggerEnter2D( Collider2D coll ) {
-
+public class GoingToHell : MonoBehaviour
+{
+	void OnTriggerEnter2D( Collider2D coll )
+    {
 		GameObject collidedObj = coll.gameObject;
 		if(collidedObj.tag == "Player")
 		{

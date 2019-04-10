@@ -1,59 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StatusManager : MonoBehaviour {
+public class StatusManager : MonoBehaviour
+{
 
-	public int score = 0;
-	public int curTime = 300;
-	public int heartNum = 0;
+	public int        score = 0;
+	public int        time  = 300;
+	public int        heart = 0;
 	public static int lives = 3;
 	public int playerHealth = Globals.maxPlayerHealth;
 
-	private static StatusManager playerInstance = null;
 	private static float prevPos = 0.0f;
 
 	public int portalNum = 0;
 	public bool bossDefeated = false;
-//	public Vector3 transformedVec = new Vector3 (float.MaxValue,float.MaxValue,float.MaxValue);
-//	private bool isTransed = true;
 	private string targetScene;
 	private bool isDying = false;
 	private Animator animator;
 
-	public void enterStairPortal(string levelName) {
-
-		if (portalNum != 0) {
-			portalNum = 0;
-//			transformedVec = transform.position;
-//			isTransed = false;
-			targetScene = levelName;
-			Debug.Log ("portal transform done:" + transform.position);
-			Application.LoadLevel (targetScene);
-			Debug.Log ("Transed");
-
-//			StartCoroutine(delayingTrans());
-
-		}
-
-}
-
-
-//	public static StatusManager PlayerInstance 
-//	{
-//		get { return playerInstance; }
-//	}
-
-	// Use this for initialization
-	void Awake () {
-		instanceControl ();
+	void Awake ()
+    {
 		positionControl ();
 	}
 
 	void Start()
 	{
 		animator = GetComponent<Animator>();
-
-
 	}
 
 	void Update()
@@ -65,28 +37,6 @@ public class StatusManager : MonoBehaviour {
 		}
 	}
 
-	void instanceControl()
-	{
-		if (playerInstance != null && playerInstance != this) 
-		{
-			CollisionManager pcmScript = 
-				playerInstance.gameObject.GetComponent<CollisionManager>();
-			pcmScript.reset();
-			Destroy (this.gameObject);
-			return;
-		}
-		else 
-		{
-			playerInstance = this;
-		}
-		DontDestroyOnLoad(this.gameObject);
-
-
-
-		GameObject BGM = Resources.Load (Globals.SEdir + "BGMusic") as GameObject;
-		Instantiate (BGM, transform.position, Quaternion.identity);
-	}
-
 	public void changeBGM()
 	{
 		GameObject BGM = Resources.Load (Globals.SEdir + "BGMcus") as GameObject;	
@@ -95,9 +45,9 @@ public class StatusManager : MonoBehaviour {
 
 	void HandleOnKeyDown_G () {
 		// Gibson mode activated 
-		heartNum += 10;
+		heart += 10;
 		playerHealth = Globals.maxPlayerHealth;
-		curTime += 30;
+		time += 30;
 	}
 
 
@@ -140,8 +90,8 @@ public class StatusManager : MonoBehaviour {
 	}
 
 
-	void OnDestroy () {
-		Debug.Log ("saved position x:" + transform.position.x);
+	void OnDestroy ()
+    {
 		PlayerPrefs.SetFloat("PreviousPlayerPosition", transform.position.x);
 	}
 }

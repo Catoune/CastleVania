@@ -103,11 +103,11 @@ public class ItemMotion : MonoBehaviour
 			    break;
 
 		    case Globals.ItemName.SmallHeart:		
-			    smScript.heartNum += 1;
+			    smScript.heart += 1;
 			    break;
 
 		    case Globals.ItemName.LargeHeart:	
-			    smScript.heartNum += 5;
+			    smScript.heart += 5;
 			    break;
 
 		    case Globals.ItemName.ChickenLeg:
