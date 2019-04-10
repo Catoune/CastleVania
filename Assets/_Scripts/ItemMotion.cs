@@ -122,57 +122,10 @@ public class ItemMotion : MonoBehaviour
 
 		    default:
 			    break;
-		    }
-
-
-			GameObject[] allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
-			foreach(GameObject enemy in allEnemy)
-			{
-				OnWhipEvent whipScript = enemy.GetComponent<OnWhipEvent>();
-				
-				if(whipScript != null)
-				{
-					whipScript.onWhipEnter();
-				}
-			}
-			break;
-
-		case Globals.ItemName.Dagger:
-			wepManager.weaponPickedUp(Globals.SubWeapon.Dagger);
-			break;
-
-		case Globals.ItemName.Axe:
-			wepManager.weaponPickedUp(Globals.SubWeapon.Axe);
-			break;		
-		
-		case Globals.ItemName.HolyWater:
-			wepManager.weaponPickedUp(Globals.SubWeapon.HolyWater);
-			break;
-		
-		case Globals.ItemName.StopWatch:
-			wepManager.weaponPickedUp(Globals.SubWeapon.StopWatch);
-			break;
-		
-		case Globals.ItemName.BossHeart:
-			getBossHeart();
-			break;
-
-		case Globals.ItemName.ChickenLeg:
-			smScript.playerHealth += 6;
-			Mathf.Clamp(smScript.playerHealth, 0, Globals.maxBossHealth);
-			break;
-
-		default:
-			break;
 		}
 
-		Debug.Log ("Player picked Up");
 		if(GetComponent<AudioSource>())
 			GetComponent<AudioSource>().Play ();
 		Destroy (this.gameObject);
 	}
 }
-
-		    if(GetComponent<AudioSource>())
-			    GetComponent<AudioSource>().Play ();
-		    Destroy (this.gameObject);
