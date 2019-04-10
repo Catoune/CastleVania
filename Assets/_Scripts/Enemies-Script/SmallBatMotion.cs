@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SmallBatMotion : MonoBehaviour {
-	
+public class SmallBatMotion : MonoBehaviour
+{
 	public float HorizontalSpeed; // adjust in inspector 
 	public float VerticalSpeed; // should be private 
 	public float omega;
 	public float amplitude;
-	// could be negative 
-	
+
 	private const float perishInSec = 1.0f;
 	private bool isAwake;
 	private Vector2 speed;
@@ -18,8 +17,8 @@ public class SmallBatMotion : MonoBehaviour {
 	private Animator animator;
 	private float inittime;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		inittime = Time.time;
 		isAwake = false;
 		VerticalSpeed = 0.0f;
@@ -34,22 +33,18 @@ public class SmallBatMotion : MonoBehaviour {
 
 		if (!facingRight)
 			Flip();
-		// CollisionManager cmScript = GetComponent<CollisionManager>();
+
 		animator = GetComponent<Animator> ();
-		if (!animator) {
-			Debug.LogError("animator can't retrieve");
-		}
 		wakeUp ();
 	}
 	public void wakeUp()
 	{
 		isAwake = true;
 		animator.SetBool ("Fly", true);
-		
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
 		if(isAwake)
 			move ();
 	}
@@ -63,30 +58,28 @@ public class SmallBatMotion : MonoBehaviour {
 	}
 	
 	
-	void OnTriggerEnter2D( Collider2D coll ) {
+	void OnTriggerEnter2D( Collider2D coll )
+    {
 		GameObject collidedObj = coll.gameObject;
 		if (collidedObj.tag == Globals.playerTag) 
 		{
 			onPlayerEnter(coll.gameObject);		              
 		}
-
-		
 	}
 	
 	void onPlayerEnter(GameObject gb)
 	{
-		Debug.Log ("Player hitted");
 		PlayerController pcScript = gb.GetComponent<PlayerController> ();
 		pcScript.Hurt ();
 
 		OnWhipHitDestroy owhScript = GetComponent<OnWhipHitDestroy>();
 		owhScript.onWhipEnter();
 	}
-	// only change scale
-	public void Flip() {
+
+	public void Flip()
+    {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
-		
 	}
 }
