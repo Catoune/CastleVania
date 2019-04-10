@@ -18,7 +18,6 @@ public class ItemMotion : MonoBehaviour {
 
 	StatusManager smScript;
 	WhipAttackManager attManager;
-	SubWeaponManager wepManager;
 
 	// Use this for initialization
 	void Start () {
@@ -70,7 +69,6 @@ public class ItemMotion : MonoBehaviour {
 	{
 		smScript = plObj.GetComponent<StatusManager> ();
 		attManager = plObj.GetComponent<WhipAttackManager> ();
-		wepManager = plObj.GetComponent<SubWeaponManager> ();
 
 		switch (itemName)
 		{
@@ -162,7 +160,7 @@ public class ItemMotion : MonoBehaviour {
 			}
 			break;
 
-		case Globals.ItemName.Dagger:
+		/*case Globals.ItemName.Dagger:
 			wepManager.weaponPickedUp(Globals.SubWeapon.Dagger);
 			break;
 
@@ -180,7 +178,7 @@ public class ItemMotion : MonoBehaviour {
 		
 		case Globals.ItemName.BossHeart:
 			getBossHeart();
-			break;
+			break;*/
 
 		case Globals.ItemName.ChickenLeg:
 			smScript.playerHealth += 6;
