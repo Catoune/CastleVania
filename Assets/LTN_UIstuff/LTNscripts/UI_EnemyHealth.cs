@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_PlayerHealth : MonoBehaviour
+public class UI_EnemyHealth : MonoBehaviour
 {
+    private Image image;
 
-    public Image image;
     [SerializeField]
     Sprite[] healthBar;
-    StatusManager status;
+    BossMotion eStatus;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        status = GameObject.FindGameObjectWithTag("Player").GetComponent<StatusManager>();
-        //healthBar = GetComponent<Image> ();
+        eStatus = GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossMotion>();
         healthBar = new Sprite[17];
 
     }
@@ -24,7 +24,7 @@ public class UI_PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        image.sprite = healthBar[playerHealth];
+        image.sprite = healthBar[bossHealth];
 
 
     }
