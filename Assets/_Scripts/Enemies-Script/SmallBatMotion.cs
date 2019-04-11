@@ -9,7 +9,7 @@ public class SmallBatMotion : MonoBehaviour
 	public float amplitude;
 
 	private const float perishInSec = 1.0f;
-	private bool isAwake;
+	private bool isAwake ;
 	private Vector2 speed;
 	
 	private bool onGround;
@@ -37,6 +37,7 @@ public class SmallBatMotion : MonoBehaviour
 		animator = GetComponent<Animator> ();
 		wakeUp ();
 	}
+
 	public void wakeUp()
 	{
 		isAwake = true;
