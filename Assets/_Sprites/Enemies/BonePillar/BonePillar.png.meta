@@ -1,0 +1,251 @@
+fileFormatVersion: 2
+guid: 36bbbb17ea731454787e9641ab34edb9
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_0
+    21300002: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_1
+    21300004: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_2
+    21300006: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_3
+    21300008: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_4
+    21300010: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_5
+    21300012: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_6
+    21300014: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_7
+    21300016: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_9
+    21300018: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_10
+    21300020: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_11
+    21300022: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_13
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 121
+        width: 26
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5769231, y: 0.73913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe7a46cb1851a8499d3981ff371fdb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 117
+        width: 27
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5925926, y: 0.8148148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64b47f22884821498bcacccad1e4f61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 119
+        width: 27
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5925926, y: 0.79999995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa593f6f1e657464fb963e6511e33283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 119
+        width: 27
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5925926, y: 0.79999995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119c387228bbb424cbcd8f917d1b827e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 119
+        width: 27
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5925926, y: 0.79999995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f9c81d99b6d4a428739b0e0741f1c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_5
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 119
+        width: 27
+        height: 25
+      alignment: 9
+      pivot: {x: 0.6296296, y: 0.79999995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da15a2fcc8f0e5541bbc757f81f67fcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Castlevania Dawn of Sorrow - Bone Pillar_6
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 92
+        width: 26
+        height: 21
+      alignment: 9
+      pivot: {x: 0.61538464, y: 0.7619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1861a0b22adf6884aa0a3d0c24a5e828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 149d2a83cbc5fe34da6b7b33d8732d18
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
