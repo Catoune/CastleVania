@@ -3,7 +3,6 @@ using System.Collections;
 
 public class OnWhipHitDestroy : OnWhipEvent
 {
-
 	public GameObject itemPrefab;
 
 	public bool fixedItem = true;
@@ -36,8 +35,6 @@ public class OnWhipHitDestroy : OnWhipEvent
 			if(smScript)
 				smScript.score += 100;
 		}
-
-
 
 		if(!fixedItem)
 		{
