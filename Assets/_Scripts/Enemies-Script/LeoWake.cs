@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LeoWake : MonoBehaviour {
-
-
-	// Use this for initialization
-	void Start () {
-	}
-	
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.tag == "Player") {
+public class LeoWake : MonoBehaviour
+{	
+	void OnTriggerEnter2D(Collider2D other)
+    {
+		if (other.gameObject.tag == "Player")
+        {
 			leoWake();
 			GetComponent<Collider2D>().enabled = false;
 		}
@@ -19,7 +16,5 @@ public class LeoWake : MonoBehaviour {
 	{
 		LeoMotion lmScript = GetComponentInParent<LeoMotion>();
 		lmScript.wakeUp ();
-
 	}
-
 }
