@@ -29,7 +29,7 @@ public class HurtManager : MonoBehaviour
 		disableControl = false;
 	}
 
-	public bool onFlyHurting (){return disableControl;}
+	public bool onFlyHurting (){return disableControl;} //Permet d'avoir la condition
 
     public IEnumerator Hurt()
     {
