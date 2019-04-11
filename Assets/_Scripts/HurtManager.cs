@@ -1,16 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HurtManager : MonoBehaviour {
+public class HurtManager : MonoBehaviour
+{
+	private bool hurting;
 
-	public float InvisibleInterval = 1.0f;
-	public float initHurtVerticalSpeed = 1.0f;
-
-	private bool hurting; // only provide accessor
-	public bool Hurting {
-		get {
-			return hurting || disableControl;
-		}
+    //Juste un Get, pas besoin de Set.
+	public bool Hurting
+    {
+		get {return hurting || disableControl;}
 	}
 
 	private bool disableControl;
@@ -20,60 +18,50 @@ public class HurtManager : MonoBehaviour {
 	private SpriteRenderer sprite;
 	private StatusManager status;
 
-	void Start () {
-		animator = GetComponent<Animator> ();
-		pc = GetComponent<PlayerController> ();
-		sprite = GetComponent<SpriteRenderer> ();
-		status = GetComponent<StatusManager> ();
-		hurting = false;
+	void Start ()
+    {
+		animator = GetComponent<Animator        >();
+		pc       = GetComponent<PlayerController>();
+		sprite   = GetComponent<SpriteRenderer  >();
+		status   = GetComponent<StatusManager   >();
 
+		hurting        = false;
 		disableControl = false;
 	}
-	// HACK
-	public bool onFlyHurting () {
-		return disableControl;
-	}
-    // ============================================================================ //
+
+	public bool onFlyHurting (){return disableControl;}
+
     public IEnumerator Hurt()
     {
-        status.playerHealth -= 2;
-
-        Debug.Log("HURTING: Hurt fucntion called");
-        hurting = true;
-
-        // TODO do what ever is needed to turn off some collision
-        // CODE HERE
+        status.playerHealth -= 2; //Vie que le joueur perd
+        hurting        = true;
         disableControl = true;
 
         animator.SetBool("Hurt", true);
-        pc.VerticalSpeed = 0; //reset to avoid fly high
-        pc.VerticalSpeed += initHurtVerticalSpeed;
-        // add horizontal speed according to facing
+        pc.VerticalSpeed      = 1.7f                     ;
         pc.HorizontalVelocity = pc.isFacingRight ? -1 : 1;
+        StartCoroutine(Invisible());
 
         yield return new WaitForSeconds(0.33f);
-        animator.SetBool("Hurt", false);
-        Debug.Log("HURTING: fly state cleaned");
-        StartCoroutine(turnInvisible());
-        // turn 
-        animator.SetInteger("Speed", 0);
+        animator.SetBool   ("Hurt" , false);
+        animator.SetInteger("Speed",     0);
 
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(   0f);
         pc.HorizontalVelocity = 0;
-        disableControl = false;
+        disableControl        = false;
     }
 	
-	public IEnumerator turnInvisible () {
-		hurting = true;
+    //Effet d'invisibilité lorsque touché
+	public IEnumerator Invisible ()
+    {
+		hurting        = true;
 		Color curColor = sprite.color;
-		curColor.a = curColor.a/2; // turn to half alpha
-		sprite.color = curColor;
+		curColor.a     = curColor.a/2; //Alpha coupé en 2
+		sprite.color   = curColor    ;
 
-		yield return new WaitForSeconds (InvisibleInterval);
-		curColor.a = 1.0f; // return to full alpha
-		sprite.color = curColor;
-		hurting = false;
-
-		// TODO enable physics again 
+		yield return new WaitForSeconds (1.0f);
+		curColor.a   = 1.0f          ; //Alpha de base
+		sprite.color = curColor      ;
+		hurting = false              ;
 	}
 }
