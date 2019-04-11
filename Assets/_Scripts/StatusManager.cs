@@ -11,10 +11,9 @@ public class StatusManager : MonoBehaviour
 	public int playerHealth = Globals.maxPlayerHealth;
 
 	private static float prevPos = 0.0f;
+    public bool savePos = false;
 
-	public int portalNum = 0;
-	public bool bossDefeated = false;
-	private string targetScene;
+    public bool bossDefeated = false;
 	private bool isDying = false;
 	private Animator animator;
 
@@ -39,33 +38,20 @@ public class StatusManager : MonoBehaviour
 
 	public void changeBGM()
 	{
-		GameObject BGM = Resources.Load (Globals.SEdir + "BGMcus") as GameObject;	
+		GameObject BGM = Resources.Load ("Prefab/ AudioObject/BGMcus") as GameObject;	
 		Instantiate (BGM, transform.position, Quaternion.identity);
 	}
-
-	void HandleOnKeyDown_G () {
-		// Gibson mode activated 
-		heart += 10;
-		playerHealth = Globals.maxPlayerHealth;
-		time += 30;
-	}
-
-
-	public bool savePos = false;
 
 	void positionControl()
 	{
 		// If the PreviousPlayerPosition already exists, read it
-		if (PlayerPrefs.HasKey("PreviousPlayerPosition")) {                   // 2
-			prevPos = PlayerPrefs.GetFloat("PreviousPlayerPosition");
-		}
+		if (PlayerPrefs.HasKey("PreviousPlayerPosition")) {prevPos = PlayerPrefs.GetFloat("PreviousPlayerPosition");}
 		// Assign the prevPos to PreviousPlayerPosition
 		PlayerPrefs.SetFloat("PreviousPlayerPosition", prevPos); 
 
 		if(savePos)
 			transform.position = new Vector3 (prevPos, transform.position.y, transform.position.z);
 	}
-
 
 	public void playerDie()
 	{
@@ -75,11 +61,8 @@ public class StatusManager : MonoBehaviour
 
 	IEnumerator playerDying()
 	{
-//		yield return new WaitForSeconds (0.5f);
 		lives--;
 		animator.SetBool ("Dead", true);
-		GameObject SimonDead = Resources.Load (Globals.SEdir + "SimonDead") as GameObject;
-		Instantiate (SimonDead, transform.position, Quaternion.identity);
 
 		yield return new WaitForSeconds (2.5f);
 
