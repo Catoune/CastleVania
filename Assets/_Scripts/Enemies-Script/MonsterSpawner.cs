@@ -5,6 +5,7 @@ using System.Collections;
 //Attaché à un trigger
 public class MonsterSpawner : MonoBehaviour
 {
+    //A regler dans l'inspector
 	public GameObject monsterPrefab     ; // Monstre à faire spawn
 	public Vector2    createAt          ; // Position de création
 

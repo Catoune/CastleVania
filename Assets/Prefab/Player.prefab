@@ -16,10 +16,9 @@ GameObject:
   - component: {fileID: 4690212091323934436}
   - component: {fileID: 4690212091323929014}
   - component: {fileID: 4690212091323916980}
-  - component: {fileID: 4690212091323998404}
   - component: {fileID: 4690212091323931228}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,12 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d46fbff6de199d48a14a96e9ece74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponLevel: 1
-  collideLayer:
-    serializedVersion: 2
-    m_Bits: 0
   attacking: 0
-  testDamage: 0
+  WeaponLevel: 1
 --- !u!114 &4690212091323934436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,17 +157,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44963276c599684eadf9166d9ad5d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 0.5
-  HorizonalSpeedScale: 0.7
-  initVerticalSpeed: 2
-  DropVerticalSpeed: -5
-  StairStepLength: 0
-  VerticalAccerlation: -5.1
-  facingRight: 0
-  VerticalSpeed: 0
-  HorizontalSpeed: 0
+  isFacingRight: 0
   grounded: 1
-  moveX: 0
+  isMoving: 0
+  VerticalSpeed: 0
 --- !u!114 &4690212091323929014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,27 +188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  curTime: 300
-  heartNum: 0
+  time: 300
+  heart: 0
   playerHealth: 16
-  portalNum: 0
-  bossDefeated: 0
   savePos: 0
---- !u!114 &4690212091323998404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4690212091317417286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046f768a99585bf48a6a39ef4d9d652c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwing: 0
-  subWeapons: []
-  isCarrying: 0
+  bossDefeated: 0
 --- !u!114 &4690212091323931228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,5 +205,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3956f6472823ed049acf788cda9fd99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvisibleInterval: 1
-  initHurtVericalSpeed: 1

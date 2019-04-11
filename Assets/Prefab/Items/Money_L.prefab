@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 11492132}
   - component: {fileID: 11446990}
   m_Layer: 0
-  m_Name: Money_S
+  m_Name: Money_L
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,15 +69,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 103185365
+  m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300060, guid: 83bf2182062249640b3f8e0d8589480b, type: 3}
+  m_Sprite: {fileID: 21300026, guid: 7bc188bf518122847ae0d0bd57fa6afe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.14, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,7 +122,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.14, y: 0.15}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.14, y: 0.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   perishInSec: 10
   Amplitude: 0
   omega: 2
-  itemName: 0
+  itemName: 2
 --- !u!114 &11446990
 MonoBehaviour:
   m_ObjectHideFlags: 0
