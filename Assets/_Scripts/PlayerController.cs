@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
 	protected Animator          animator        ;
     protected CollisionManager  collManager     ;
     private   WhipAttackManager whipAttManager  ;
-	private   SubWeaponManager  subWeaponManager;
 	private   HurtManager       hurtManager     ;
 	private int horizontalVelocity = 0; // should only have values -1, 0, 1
 
@@ -28,7 +27,6 @@ public class PlayerController : MonoBehaviour
 		animator         = GetComponent<Animator>         ();
 		whipAttManager   = GetComponent<WhipAttackManager>();
 		collManager      = GetComponent<CollisionManager> ();
-		subWeaponManager = GetComponent<SubWeaponManager> ();
 		hurtManager      = GetComponent<HurtManager>      ();
 
 		collManager.ExitGround += handleOnExitGround;
@@ -58,7 +56,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Vertical") ==   0){CrounchOff();}
         if (Input.GetButtonDown("Jump"  )   ){JumpButton();}
         if (Input.GetButtonDown("Attack")   ){    Attack();}
-        if (Input.GetButtonDown("Attack") && (Input.GetAxis("Vertical") < 0)){ThrowWeapon();}
+        //if (Input.GetButtonDown("Attack") && (Input.GetAxis("Vertical") < 0)){ThrowWeapon();}
     }
 
     void FixedUpdate()
@@ -130,11 +128,6 @@ public class PlayerController : MonoBehaviour
 		else if (horizontalVelocity == -1){                                ;}
 	}
 
-	void KeyDownUp ()
-	{
-        if (!grounded || whipAttManager.attacking || subWeaponManager.throwing){ return;}
-	}
-
     //Jump
 	void JumpButton ()
     {
@@ -172,13 +165,6 @@ public class PlayerController : MonoBehaviour
 	void CrounchOff ()
     {
 		animator.SetBool ("Squat", false);
-	}
-
-    //Jeter des armes secondaires (A SUPPRIMER SI INUTILE)
-	void ThrowWeapon ()
-    {
-        if      (!subWeaponManager.throwing && subWeaponManager.isCarrying && !whipAttManager.attacking) { StartCoroutine(subWeaponManager.Throw())   ;}
-        else if (!whipAttManager.attacking)                                                              { StartCoroutine(whipAttManager.WhipAttack());}
 	}
 
 	public virtual void Hurt()
