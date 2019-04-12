@@ -13,16 +13,23 @@ public class MonsterSpawner : MonoBehaviour
     private int currentMonsterNumber = 0; // Nombre actuel de monstre
 
 	public float creationDelay = 0.5f   ; // Temps avant de spawn un autre monstre
-	public float refreshTime   = 5.0f   ; // Temps avant de repartir à 0
+	public float refreshTime   = 1.0f   ; // Temps avant de repartir à 0
+
+    public bool isTrap = false;
 	
 	void OnTriggerEnter2D(Collider2D other)
     {
-		if (other.gameObject.tag == "Player") {StartCoroutine(spawnMonster());}
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Entrée du trap");
+            isTrap = true;
+            StartCoroutine(spawnMonster());
+        }
 	}
 
 	IEnumerator spawnMonster()
 	{
-		while (GetComponent<Collider2D>().enabled == true)
+		while (GetComponent<Collider2D>().enabled == true && isTrap)
         {
 			for (; currentMonsterNumber < numberMonsters; ++currentMonsterNumber)
             {
@@ -48,7 +55,9 @@ public class MonsterSpawner : MonoBehaviour
 
 	IEnumerator waitToReset()
 	{
+        Debug.Log("Sorti du trap");
 		GetComponent<Collider2D>().enabled = false;
+        isTrap = false;
 		yield return new WaitForSeconds (refreshTime);
 		GetComponent<Collider2D>().enabled = true;
 	}
