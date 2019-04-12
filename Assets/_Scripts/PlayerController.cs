@@ -39,13 +39,13 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetAxis("Horizontal")>0)
         {
-            RightDirection();
-            isMoving = true;
+                RightDirection();
+                isMoving = true;
         }
         if (Input.GetAxis("Horizontal") < 0)
         {
-            LeftDirection();
-            isMoving = true;
+                LeftDirection();
+                isMoving = true;
         }
         if (Input.GetAxis("Horizontal") == 0)
         {

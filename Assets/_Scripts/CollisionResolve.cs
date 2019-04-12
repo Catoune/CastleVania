@@ -63,7 +63,8 @@ public class CollisionResolve : MonoBehaviour
 	void releaseItem(GameObject collidedObj)
 	{	
 		CollisionManager cmScript = collidedObj.GetComponent<CollisionManager>();
-		if (cmScript != null) {
+		if (cmScript != null)
+        {
 			cmScript.playerCollisionExit ((int)collIdTable[collidedObj.GetInstanceID()]);
 			collIdTable.Remove(collidedObj.GetInstanceID());
 		}

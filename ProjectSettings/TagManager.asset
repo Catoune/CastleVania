@@ -10,6 +10,9 @@ TagManager:
   - Map
   - Boss
   - Input
+  - StairDetector
+  - Stair
+  - Wall
   layers:
   - Default
   - TransparentFX
