@@ -5,18 +5,13 @@ public class OnWhipHitDestroy : OnWhipEvent
 {
 	public GameObject itemPrefab;
 
-	public bool fixedItem = true;
-
-	private bool hitted = false;
-
-	private static GameObject[] randItems;
+	public  bool fixedItem = true;
+	private bool hitted    = false;
 
 	public override void onWhipEnter ()
     {
-		if(!hitted)
-			StartCoroutine (revealItemAndDestroy());
+        if (!hitted) { StartCoroutine(revealItemAndDestroy()); }
 	}
-
 
 	IEnumerator revealItemAndDestroy()
 	{
@@ -24,33 +19,14 @@ public class OnWhipHitDestroy : OnWhipEvent
 		GameObject deathEffect = Resources.Load ("Prefab/death") as GameObject;
 		Instantiate (deathEffect, GetComponent<Collider2D>().bounds.center, Quaternion.identity);
 
-		randItems = Resources.LoadAll<GameObject>("Prefab/RandItem");
 		GameObject hitSE = Resources.Load (Globals.SEdir + "hitSE") as GameObject;
 		Instantiate (hitSE, transform.position, Quaternion.identity);
 
 		GameObject pObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
 		if(pObj)
 		{
-			StatusManager smScript = 
-				pObj.GetComponent<StatusManager> ();
-			if(smScript)
-				smScript.score += 100;
-		}
-
-		if(!fixedItem)
-		{
-			int randId = Random.Range(0, randItems.Length);
-			itemPrefab = randItems[randId];
-			if(itemPrefab.name == "WhipUp")
-			{
-				WhipAttackManager wamScript = 
-					GameObject.FindGameObjectWithTag(Globals.playerTag).GetComponent<WhipAttackManager>();
-
-				if(wamScript.WeaponLevel == 3)
-				{
-					itemPrefab = randItems[1];
-				}
-			}
+			StatusManager smScript = pObj.GetComponent<StatusManager> ();
+            if (smScript){ smScript.score += 100;}
 		}
 
 		Instantiate (itemPrefab, transform.position, Quaternion.identity);

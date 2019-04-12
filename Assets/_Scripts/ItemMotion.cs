@@ -81,7 +81,6 @@ public class ItemMotion : MonoBehaviour
 			    break;
 			
 		    case Globals.ItemName.WhipUp:
-	
 		    default:
 			    GameObject defaultSE = Resources.Load (Globals.SEdir + "heartSE") as GameObject;
 			    Instantiate (defaultSE, transform.position, Quaternion.identity);

@@ -3,13 +3,9 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
-
-    public GameObject player;
-
-    public Camera mainCamera;
-
-    private Vector3 offset;
-
+    public  GameObject player;
+    public  Camera mainCamera;
+    private Vector3    offset;
 
     void Start()
     {

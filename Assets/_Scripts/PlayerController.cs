@@ -14,9 +14,12 @@ public class PlayerController : MonoBehaviour
     protected CollisionManager  collManager     ;
     private   WhipAttackManager whipAttManager  ;
 	private   HurtManager       hurtManager     ;
-	private int horizontalVelocity = 0; // should only have values -1, 0, 1
+	private int horizontalVelocity = 0;
 
-	public int HorizontalVelocity
+    public AudioSource attackSound;
+    public AudioSource hurtSound;
+
+    public int HorizontalVelocity
 	{
 		get{return horizontalVelocity ;}
 		set{horizontalVelocity = value;}
@@ -149,7 +152,11 @@ public class PlayerController : MonoBehaviour
     //Attaque du Personnage
     void Attack ()
     {
-        if (!whipAttManager.attacking) { StartCoroutine(whipAttManager.WhipAttack());}
+        if (!whipAttManager.attacking)
+        {
+            attackSound.Play();
+            StartCoroutine(whipAttManager.WhipAttack());
+        }
 	}
 
 	
@@ -169,7 +176,11 @@ public class PlayerController : MonoBehaviour
 
 	public virtual void Hurt()
     {
-        if (!hurtManager.Hurting && !animator.GetBool("Dead")) { StartCoroutine(hurtManager.Hurt());}
+        if (!hurtManager.Hurting && !animator.GetBool("Dead"))
+        {
+            hurtSound.Play();
+            StartCoroutine(hurtManager.Hurt());
+        }
 	}
 
 	void handleOnExitGround()
