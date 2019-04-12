@@ -92,27 +92,22 @@ public class ItemMotion : MonoBehaviour
 		{
 		    case Globals.ItemName.Money_S:
 			    smScript.score += 100;
-			    Debug.Log ("fetched small money");
 			    break;
 
 		    case Globals.ItemName.Money_M:		
 			    smScript.score += 400;
-			    Debug.Log ("fetched medium money");
 			    break;
 
 		    case Globals.ItemName.Money_L:		
 			    smScript.score += 700;
-			    Debug.Log ("fetched large money");
 			    break;
 
 		    case Globals.ItemName.SmallHeart:		
 			    smScript.heart += 1;
-			    Debug.Log ("fetched heart");
 			    break;
 
 		    case Globals.ItemName.LargeHeart:	
 			    smScript.heart += 5;
-			    Debug.Log ("fetched heart");
 			    break;
 
 		    case Globals.ItemName.ChickenLeg:

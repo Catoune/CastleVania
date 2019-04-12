@@ -11,7 +11,8 @@ public class OnWhipHitDestroy : OnWhipEvent
 
 	private static GameObject[] randItems;
 
-	public override void onWhipEnter (){
+	public override void onWhipEnter ()
+    {
 		if(!hitted)
 			StartCoroutine (revealItemAndDestroy());
 	}
