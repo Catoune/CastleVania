@@ -15,7 +15,7 @@ public class MonsterSpawner : MonoBehaviour
 	public float creationDelay = 0.5f   ; // Temps avant de spawn un autre monstre
 	public float refreshTime   = 1.0f   ; // Temps avant de repartir à 0
 
-    public bool isTrap = false;
+    private bool isTrap = false;
 	
 	void OnTriggerEnter2D(Collider2D other)
     {
