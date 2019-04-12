@@ -6,17 +6,19 @@ using UnityEngine.UI;
 public class UI_EnemyHealth : MonoBehaviour
 {
     private Image image;
+    BossMotion eStatus;
 
     [SerializeField]
     Sprite[] healthBar;
-    BossMotion eStatus;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        image = GetComponent<Image>();        
         eStatus = GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossMotion>();
+        eStatus.bossHealth = Globals.maxBossHealth;
         healthBar = new Sprite[17];
 
     }
@@ -24,8 +26,7 @@ public class UI_EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int bossHealth = eStatus.bossHealth;
         image.sprite = healthBar[bossHealth];
-
-
     }
 }

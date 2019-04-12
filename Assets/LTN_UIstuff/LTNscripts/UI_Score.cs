@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_PlayerHealth : MonoBehaviour
+
+public class UI_Score : MonoBehaviour
 {
 
     private Image image;
-    [SerializeField]
-    Sprite[] healthBar;
-    StatusManager status;
+    private StatusManager status;
+    private Text text;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        image = GetComponent<Image>();
         status = GameObject.FindGameObjectWithTag("Player").GetComponent<StatusManager>();
-        status.playerHealth = Globals.maxPlayerHealth;        
-        healthBar = new Sprite[17];
+        text = GetComponent<Text>();
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        int playerHealth = status.playerHealth;
-        image.sprite = healthBar[playerHealth];        
+        
     }
 }
